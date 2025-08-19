@@ -1,0 +1,80 @@
+/* 
+ * Styles spécifiques pour les icônes de tableau de bord des composants
+ * Applique les couleurs MDBootstrap aux icônes du tableau de bord
+ */
+
+/* Icône du tableau de bord des composants */
+.quickicon-icon,
+.quickicon-icon-overlay,
+.quickicon a .quickicon-icon,
+.quickicon button .quickicon-icon,
+.quickicon-icon-overlay,
+.quickicon-icon-overlay-wrap,
+.quickicon-icon-overlay-wrap .quickicon-icon,
+.quickicon-icon-overlay-wrap .quickicon-icon-overlay,
+.quickicon-icon > *,
+.quickicon-icon-overlay > *,
+.quickicon-icon [class^="icon-"],
+.quickicon-icon [class*=" icon-"],
+.quickicon-icon-overlay [class^="icon-"],
+.quickicon-icon-overlay [class*=" icon-"],
+.quickicon-icon .icon-grid,
+.quickicon-icon .icon-th,
+.quickicon-icon .icon-th-large,
+.quickicon-icon .icon-dashboard,
+.quickicon-icon-overlay .icon-grid,
+.quickicon-icon-overlay .icon-th,
+.quickicon-icon-overlay .icon-th-large,
+.quickicon-icon-overlay .icon-dashboard {
+  background-color: var(--mdb-primary) !important;
+  color: #fff !important;
+  border-color: var(--mdb-primary) !important;
+}
+
+/* Styles pour les boutons du tableau de bord */
+.quickicon a,
+.quickicon button,
+.quickicon .btn,
+.quickicon-dropdown a,
+.quickicon-dropdown button,
+.quickicon-dropdown .btn,
+.quickicon-dropdown .dropdown-toggle,
+.quickicon-linkadd {
+  background-color: #fff !important;
+  color: #4f4f4f !important;
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+  border-radius: 0.25rem !important;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.05), 0 2px 10px 0 rgba(0, 0, 0, 0.05) !important;
+  transition: all 0.2s !important;
+}
+
+/* Effet de survol pour les boutons du tableau de bord */
+.quickicon a:hover,
+.quickicon button:hover,
+.quickicon .btn:hover,
+.quickicon-dropdown a:hover,
+.quickicon-dropdown button:hover,
+.quickicon-dropdown .btn:hover,
+.quickicon-dropdown .dropdown-toggle:hover,
+.quickicon-linkadd:hover {
+  background-color: rgba(var(--mdb-primary-rgb), 0.1) !important;
+  color: var(--mdb-primary) !important;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1), 0 2px 15px 0 rgba(0, 0, 0, 0.05) !important;
+}
+
+/* Style pour l'icône spécifique du tableau de bord des composants */
+.icon-grid,
+.icon-th,
+.icon-th-large,
+.icon-dashboard,
+[class^="icon-grid"],
+[class*=" icon-grid"],
+[class^="icon-th"],
+[class*=" icon-th"],
+[class^="icon-th-large"],
+[class*=" icon-th-large"],
+[class^="icon-dashboard"],
+[class*=" icon-dashboard"] {
+  color: inherit !important;
+  background-color: transparent !important;
+}

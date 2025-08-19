@@ -1,0 +1,80 @@
+/**
+ * Correctif pour l'affichage des icônes Material Icons Two-Tone
+ * Ce fichier assure que les icônes s'affichent correctement avec la couleur dynamique
+ * sur toutes les pages de l'administration, y compris la page d'accueil
+ */
+
+/* Règles spécifiques pour la page d'accueil */
+body.admin-home .menu-dashboard a::after,
+body.admin-home .menu-quicktask a::after,
+body.site-cpanel .menu-dashboard a::after,
+body.site-cpanel .menu-quicktask a::after,
+body.com_cpanel .menu-dashboard a::after,
+body.com_cpanel .menu-quicktask a::after {
+  color: var(--mdb-primary) !important;
+  fill: var(--mdb-primary) !important;
+}
+
+/* Approche alternative pour assurer la coloration des icônes */
+.menu-dashboard a::after,
+.menu-quicktask a::after {
+  /* Styles de base */
+  font-family: "Material Icons Two Tone" !important;
+  font-size: 24px !important;
+  display: inline-block !important;
+  width: 24px !important;
+  height: 24px !important;
+  line-height: 1 !important;
+  
+  /* Styles pour la coloration */
+  color: var(--mdb-primary) !important;
+  fill: var(--mdb-primary) !important;
+  
+  /* Assurer la visibilité */
+  opacity: 1 !important;
+  visibility: visible !important;
+  
+  /* Positionnement */
+  position: relative !important;
+  z-index: 10 !important;
+}
+
+/* Spécifier le contenu pour chaque icône */
+.menu-dashboard a::after {
+  content: "dashboard_customize" !important;
+}
+
+.menu-quicktask a::after {
+  content: "add_box" !important;
+}
+
+/* Styles pour les conteneurs d'icônes */
+.menu-dashboard a,
+.menu-quicktask a {
+  position: relative !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-decoration: none !important;
+  width: 40px !important;
+  height: 40px !important;
+  overflow: visible !important;
+}
+
+/* Masquer complètement les icônes d'origine */
+.menu-dashboard a [class^="icon-"],
+.menu-dashboard a [class*=" icon-"],
+.menu-dashboard a span.icon-*,
+.menu-quicktask a [class^="icon-"],
+.menu-quicktask a [class*=" icon-"],
+.menu-quicktask a span.icon-* {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  font-size: 0 !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  position: absolute !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+}

@@ -1,0 +1,63 @@
+/**
+ * Styles directs pour forcer la couleur du texte sur la page d'accueil
+ * Utilise des sélecteurs très spécifiques et !important pour garantir la priorité
+ */
+
+/* Styles inline pour le titre principal */
+#content .container-title,
+#content .container-title *,
+#content .page-title,
+#content .page-title *,
+#content h1,
+#content h2,
+#content h3,
+#content h4,
+#content h5,
+#content h6,
+#content .h1,
+#content .h2,
+#content .h3,
+#content .h4,
+#content .h5,
+#content .h6 {
+    color: var(--text-dark) !important;
+}
+
+/* Forcer la couleur sur les modules du tableau de bord */
+.cpanel-modules .card-header,
+.cpanel-modules .card-title,
+.cpanel-modules .card-body,
+.cpanel-modules button span,
+.cpanel-add-module span,
+.quickicon-title,
+.quickicon-text,
+.quickicon-description,
+.quickicon-header,
+.quickicon-body,
+.quickicon-footer,
+.quickicon-content,
+.quickicon-name,
+.quickicon-label {
+    color: var(--text-dark) !important;
+}
+
+/* Styles pour les éléments de texte généraux */
+#content p,
+#content li,
+#content a:not(.btn),
+#content label {
+    color: var(--text-dark) !important;
+}
+
+/* Style direct pour le titre "Panneau d'administration" */
+body.com_cpanel .container-title,
+body.com_cpanel .container-title *,
+body.com_cpanel .page-title,
+body.com_cpanel .page-title * {
+    color: var(--text-dark) !important;
+}
+
+/* Style pour le texte du bouton d'ajout de module */
+.cpanel-add-module span {
+    color: var(--text-dark) !important;
+}

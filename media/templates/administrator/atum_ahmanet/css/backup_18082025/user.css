@@ -1,0 +1,929 @@
+/* CSS personnalisé pour le template atum_ahmanet */
+
+/* Header - fond blanc et texte gris */
+body header.header,
+.wrapper header.header,
+#wrapper header.header,
+header.header {
+  background-color: #ffffff !important;
+}
+
+header.header *,
+header.header .navbar-nav .nav-item > .nav-link,
+header.header .navbar-nav .nav-item > a,
+header.header .navbar-brand,
+header.header .nav-item-header,
+header.header .nav-link,
+header.header .dropdown-toggle,
+header.header .dropdown-item,
+header.header .dropdown-header,
+header.header .form-control,
+header.header .btn,
+header.header .header-items .header-item-logo,
+header.header .header-title,
+header.header .header-title a,
+header.header .header-item-logo a,
+header.header .header-item-logo a span {
+  color: var(--text-dark) !important;
+}
+
+/* Styles pour les boutons du header avec MDBootstrap */
+.header-items {
+  display: flex !important;
+  align-items: center !important;
+}
+
+.header-item {
+  margin: 0 0.25rem !important;
+}
+
+/* Réinitialiser les styles par défaut des boutons du header */
+.header-item-content,
+.header-item .header-item-content,
+.header-item a,
+.header-item button {
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+/* Appliquer les styles MDBootstrap aux boutons */
+.header-item .btn,
+.header-item button.btn,
+.header-item a.btn,
+.header-item .dropdown button.dropdown-toggle,
+.header-item button.header-item-content,
+.header-item a.header-item-content,
+.header-profile button.dropdown-toggle {
+  display: flex !important;
+  align-items: center !important;
+  padding: 0.375rem 0.75rem !important; /* Taille exacte de la doc MDBootstrap */
+  border-radius: 0.25rem !important;
+  font-weight: 500 !important;
+  text-decoration: none !important;
+  margin: 0 0.25rem !important;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15) !important;
+  transition: all 0.2s !important;
+  color: #fff !important;
+  font-size: 0.8125rem !important; /* Taille exacte de la doc MDBootstrap */
+  line-height: 1.5 !important;
+  height: 2rem !important; /* Hauteur fixe pour tous les boutons */
+}
+
+/* Styles spécifiques pour chaque type de bouton */
+
+/* Bouton des messages en primary au lieu de info */
+/* Les styles pour ce bouton sont maintenant gérés par template-colors.php */
+.header-item a[href*="option=com_messages"],
+.header-item a[href*="option=com_messages"] {
+  display: inline-flex !important;
+  align-items: center !important;
+}
+
+/* Style pour le bouton frontend (site) avec style btn-primary de MDBootstrap */
+.header-item a[href^="http"].header-item-content {
+  /* Styles exacts de btn-primary de MDBootstrap */
+  display: inline-flex !important;
+  align-items: center !important;
+  padding: 0.5rem 1rem !important;
+  font-size: 0.875rem !important;
+  font-weight: 500 !important;
+  line-height: 1.5 !important;
+  color: #fff !important;
+  text-align: center !important;
+  text-decoration: none !important;
+  vertical-align: middle !important;
+  cursor: pointer !important;
+  user-select: none !important;
+  /* Couleurs primary de MDBootstrap */
+  background-color: var(--mdb-primary) !important;
+  border-color: var(--mdb-primary) !important;
+  box-shadow: 0 4px 9px -4px rgba(var(--mdb-primary-rgb), 0.5) !important;
+  border-radius: 0.25rem !important;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out !important;
+}
+
+.header-item a[href^="http"].header-item-content:hover {
+  /* Couleurs hover primary de MDBootstrap */
+  background-color: var(--mdb-primary-hover) !important;
+  border-color: var(--mdb-primary-hover) !important;
+  box-shadow: 0 8px 9px -4px rgba(var(--mdb-primary-rgb), 0.3), 0 4px 18px 0 rgba(var(--mdb-primary-rgb), 0.2) !important;
+  transform: none !important; /* Supprimer tout effet de déplacement */
+}
+
+/* Remplacer l'icône Font Awesome par l'icône Material Design */
+.header-item a[href^="http"] .header-item-icon .icon-external-link-alt {
+  display: none !important; /* Masquer complètement l'icône d'origine */
+}
+
+/* Ajouter l'icône Material Design directement dans le conteneur */
+.header-item a[href^="http"] .header-item-icon::before {
+  content: "" !important;
+  display: inline-block !important;
+  width: 1.125rem !important; /* 18px en rem */
+  height: 1.125rem !important; /* 18px en rem */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='18px' viewBox='0 0 24 24' width='18px' fill='%23FFFFFF'%3E%3Cpath d='M0 0h24v24H0V0z' fill='none'/%3E%3Cpath d='M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z'/%3E%3C/svg%3E") !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: contain !important;
+  vertical-align: middle !important;
+  margin-right: 0.5rem !important;
+}
+
+/* S'assurer que le texte du bouton est bien blanc */
+.header-item a[href^="http"] .header-item-text {
+  color: #fff !important;
+}
+
+/* Style du bouton utilisateur avec couleur secondary MDBootstrap */
+.header-profile .dropdown-toggle {
+  background-color: var(--mdb-secondary) !important; /* Secondary color MDBootstrap */
+  color: #fff !important;
+  padding: 0.5rem 1rem !important;
+  border-radius: 0.25rem !important;
+  font-size: 0.875rem !important;
+  line-height: 1.5 !important;
+  font-weight: 500 !important;
+  border: 1px solid var(--mdb-secondary) !important;
+  box-shadow: 0 4px 9px -4px rgba(var(--mdb-secondary-rgb), 0.3) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  position: relative !important;
+  text-decoration: none !important;
+  text-transform: none !important;
+  word-wrap: break-word !important;
+  white-space: normal !important;
+  cursor: pointer !important;
+  
+  /* Utiliser les styles du template */
+  
+  /* Transition uniquement pour couleur, background et box-shadow (PAS de transform) */
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out !important;
+  
+  /* Supprimer tout effet de transformation */
+  transform: none !important;
+  -webkit-transform: none !important;
+  -moz-transform: none !important;
+  -ms-transform: none !important;
+  -o-transform: none !important;
+}
+
+/* Forcer la couleur du texte en blanc pour tous les éléments */
+.header-profile .dropdown-toggle,
+.header-profile .dropdown-toggle *,
+.header-profile .dropdown-toggle .header-item-text,
+.header-profile .dropdown-toggle span {
+  color: #fff !important;
+}
+
+/* Effet hover pour le bouton utilisateur - identique au bouton frontend */
+.header-profile .dropdown-toggle:hover,
+.header-profile .dropdown-toggle:focus,
+.header-profile .dropdown-toggle:active,
+.btn-secondary:hover,
+.btn-secondary:focus,
+.btn-secondary:active {
+  background-color: var(--mdb-secondary-hover) !important; /* Utiliser la variable hover */
+  border-color: var(--mdb-secondary-hover) !important;
+  box-shadow: 0 8px 9px -4px rgba(var(--mdb-secondary-rgb), 0.3), 0 4px 18px 0 rgba(var(--mdb-secondary-rgb), 0.2) !important;
+  transform: none !important;
+  -webkit-transform: none !important;
+  -moz-transform: none !important;
+  -ms-transform: none !important;
+  -o-transform: none !important;
+}
+
+/* Masquer l'icône Font Awesome d'origine */
+.header-profile .dropdown-toggle .icon-user-circle {
+  display: none !important;
+}
+
+/* Ajouter l'icône Material Design Face */
+.header-profile .dropdown-toggle .header-item-icon::before {
+  content: "" !important;
+  display: inline-block !important;
+  width: 1.125rem !important;
+  height: 1.125rem !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='18px' viewBox='0 0 24 24' width='18px' fill='%23FFFFFF'%3E%3Cpath d='M0 0h24v24H0V0z' fill='none'/%3E%3Cpath d='M10.25 13c0 .69-.56 1.25-1.25 1.25S7.75 13.69 7.75 13s.56-1.25 1.25-1.25 1.25.56 1.25 1.25zM15 11.75c-.69 0-1.25.56-1.25 1.25s.56 1.25 1.25 1.25 1.25-.56 1.25-1.25-.56-1.25-1.25-1.25zm7 .25c0 5.52-4.48 10-10 10S2 17.52 2 12 6.48 2 12 2s10 4.48 10 10zM10.66 4.12C12.06 6.44 14.6 8 17.5 8c.46 0 .91-.05 1.34-.12C17.44 5.56 14.9 4 12 4c-.46 0-.91.05-1.34.12zM4.42 9.47c1.71-.97 3.03-2.55 3.66-4.44C6.37 6 5.05 7.58 4.42 9.47zM20 12c0-.78-.12-1.53-.33-2.24-.7.15-1.42.24-2.17.24-3.13 0-5.92-1.44-7.76-3.69C8.69 8.87 6.6 10.88 4 11.86c.01.04 0 .09 0 .14 0 4.41 3.59 8 8 8s8-3.59 8-8z'/%3E%3C/svg%3E") !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: contain !important;
+  vertical-align: middle !important;
+  margin-right: 0.5rem !important;
+}
+
+.header-item a.btn-info:not([href*="option=com_messages"]),
+.header-item button.btn-info:not([href*="option=com_messages"]) {
+  background-color: var(--mdb-info) !important; /* Info color */
+}
+
+.header-item a.btn-info:not([href*="option=com_messages"]):hover,
+.header-item button.btn-info:not([href*="option=com_messages"]):hover {
+  background-color: var(--mdb-info-hover) !important; /* Variable hover */
+  border-color: var(--mdb-info-hover) !important;
+}
+
+.header-item a.btn-success,
+.header-item button.btn-success {
+  background-color: var(--mdb-success) !important; /* Success color */
+}
+
+.header-item a.btn-success:hover,
+.header-item button.btn-success:hover {
+  background-color: var(--mdb-success-hover) !important; /* Variable hover */
+  border-color: var(--mdb-success-hover) !important;
+}
+
+.header-item a.btn-warning,
+.header-item button.btn-warning,
+.header-item button.header-item-content[data-joomla-dialog] {
+  background-color: var(--mdb-warning) !important; /* Warning color */
+}
+
+.header-item a.btn-warning:hover,
+.header-item button.btn-warning:hover,
+.header-item button.header-item-content[data-joomla-dialog]:hover {
+  background-color: var(--mdb-warning-hover) !important; /* Variable hover */
+  border-color: var(--mdb-warning-hover) !important;
+  box-shadow: 0 8px 9px -4px rgba(var(--mdb-warning-rgb), 0.3), 0 4px 18px 0 rgba(var(--mdb-warning-rgb), 0.2) !important;
+}
+
+/* Effet hover sur les boutons - uniquement l'ombre qui change */
+/* Sélecteurs génériques supprimés pour éviter les conflits */
+
+/* Style spécifique pour le bouton utilisateur au survol */
+.header-profile .dropdown-toggle:hover,
+.header-profile button.dropdown-toggle:hover,
+.header-profile .header-item-content.dropdown-toggle:hover,
+.header-item.header-profile .dropdown-toggle:hover,
+.header-item.header-profile button.dropdown-toggle:hover,
+body header.header .header-items .header-item.header-profile .dropdown-toggle:hover,
+header .header-items .header-item.header-profile button.dropdown-toggle:hover {
+  transform: none !important;
+  -webkit-transform: none !important;
+  -moz-transform: none !important;
+  -ms-transform: none !important;
+  -o-transform: none !important;
+  background-color: var(--mdb-secondary-hover) !important; /* Variable hover */
+  border-color: var(--mdb-secondary-hover) !important;
+  box-shadow: 0 8px 9px -4px rgba(var(--mdb-secondary-rgb), 0.3), 0 4px 18px 0 rgba(var(--mdb-secondary-rgb), 0.2) !important;
+}
+
+/* Style pour le bouton notifications (bell) */
+.header-item a.header-item-content[href*="com_postinstall"] {
+  background-color: var(--mdb-warning) !important; /* Warning color MDBootstrap */
+  border: 1px solid var(--mdb-warning) !important;
+  border-radius: 0.25rem !important;
+  color: #fff !important;
+  padding: 0.5rem 1rem !important;
+  box-shadow: 0 4px 9px -4px rgba(var(--mdb-warning-rgb), 0.3) !important;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out !important;
+}
+
+.header-item a.header-item-content[href*="com_postinstall"]:hover {
+  background-color: var(--mdb-warning-hover) !important; /* Variable hover */
+  border-color: var(--mdb-warning-hover) !important;
+  box-shadow: 0 8px 9px -4px rgba(var(--mdb-warning-rgb), 0.3), 0 4px 18px 0 rgba(var(--mdb-warning-rgb), 0.2) !important;
+}
+
+.header-item a.header-item-content[href*="com_postinstall"] .header-item-text,
+.header-item a.header-item-content[href*="com_postinstall"] .header-item-icon {
+  color: #fff !important;
+}
+
+/* Masquer l'icône Font Awesome et ajouter l'icône Material Design */
+.header-item a.header-item-content[href*="com_postinstall"] .icon-bell {
+  font-size: 0 !important;
+}
+
+.header-item a.header-item-content[href*="com_postinstall"] .icon-bell::before {
+  content: "" !important;
+  display: inline-block !important;
+  width: 1.125rem !important;
+  height: 1.125rem !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='18px' viewBox='0 0 24 24' width='18px' fill='%23FFFFFF'%3E%3Cpath d='M0 0h24v24H0V0z' fill='none'/%3E%3Cpath d='M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-7 9h-2V5h2v6zm0 4h-2v-2h2v2z'/%3E%3C/svg%3E") !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: contain !important;
+  vertical-align: middle !important;
+  margin-right: 0.5rem !important;
+}
+
+/* Style pour le compteur de notifications */
+.header-item a.header-item-content[href*="com_postinstall"] .header-item-count {
+  color: #fff !important;
+  font-weight: 500 !important;
+  margin-left: 1rem !important;
+  display: inline-block !important;
+  vertical-align: middle !important;
+  font-size: 0.75rem !important;
+  line-height: 0.75rem !important;
+}
+
+/* Style pour le bouton tours guidés (map-signs) */
+.header-item-content.header-tours .dropdown-toggle,
+.header-item .header-tours button.dropdown-toggle {
+  background-color: var(--mdb-info) !important; /* Info color MDBootstrap */
+  border: 1px solid var(--mdb-info) !important;
+  border-radius: 0.25rem !important;
+  color: #fff !important;
+  padding: 0.5rem 1rem !important;
+  box-shadow: 0 4px 9px -4px rgba(var(--mdb-info-rgb), 0.3) !important;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out !important;
+}
+
+.header-item-content.header-tours .dropdown-toggle:hover,
+.header-item .header-tours button.dropdown-toggle:hover {
+  background-color: var(--mdb-info-hover) !important; /* Variable hover */
+  border-color: var(--mdb-info-hover) !important;
+  box-shadow: 0 8px 9px -4px rgba(var(--mdb-info-rgb), 0.3), 0 4px 18px 0 rgba(var(--mdb-info-rgb), 0.2) !important;
+}
+
+.header-item-content.header-tours .dropdown-toggle .header-item-text,
+.header-item-content.header-tours .dropdown-toggle .header-item-icon,
+.header-item-content.header-tours .dropdown-toggle .icon-angle-down {
+  color: #fff !important;
+}
+
+/* Masquer l'icône Font Awesome et ajouter l'icône Material Design */
+.header-item-content.header-tours .dropdown-toggle .icon-map-signs {
+  font-size: 0 !important;
+}
+
+.header-item-content.header-tours .dropdown-toggle .icon-map-signs::before {
+  content: "" !important;
+  display: inline-block !important;
+  width: 1.125rem !important;
+  height: 1.125rem !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='18px' viewBox='0 0 24 24' width='18px' fill='%23FFFFFF'%3E%3Cpath d='M0 0h24v24H0V0z' fill='none'/%3E%3Cpath d='M20.5 3l-.16.03L15 5.1 9 3 3.36 4.9c-.21.07-.36.25-.36.48V20.5c0 .28.22.5.5.5l.16-.03L9 18.9l6 2.1 5.64-1.9c.21-.07.36-.25.36-.48V3.5c0-.28-.22-.5-.5-.5zM10 5.47l4 1.4v11.66l-4-1.4V5.47zm-5 .99l3-1.01v11.7l-3 1.16V6.46zm14 11.08l-3 1.01V6.86l3-1.16v11.84z'/%3E%3C/svg%3E") !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: contain !important;
+  vertical-align: middle !important;
+  margin-right: 0.5rem !important;
+}
+
+/* Style pour les icônes dans les items du dropdown */
+.header-tours .dropdown-menu .button-start-guidedtour .icon-map-signs::before {
+  content: "" !important;
+  display: inline-block !important;
+  width: 1rem !important;
+  height: 1rem !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='16px' viewBox='0 0 24 24' width='16px' fill='%23495057'%3E%3Cpath d='M0 0h24v24H0V0z' fill='none'/%3E%3Cpath d='M20.5 3l-.16.03L15 5.1 9 3 3.36 4.9c-.21.07-.36.25-.36.48V20.5c0 .28.22.5.5.5l.16-.03L9 18.9l6 2.1 5.64-1.9c.21-.07.36-.25.36-.48V3.5c0-.28-.22-.5-.5-.5zM10 5.47l4 1.4v11.66l-4-1.4V5.47zm-5 .99l3-1.01v11.7l-3 1.16V6.46zm14 11.08l-3 1.01V6.86l3-1.16v11.84z'/%3E%3C/svg%3E") !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: contain !important;
+  vertical-align: middle !important;
+}
+
+/* Style pour remplacer l'icône home par Material Design Two Tone */
+.header-title .icon-home,
+.header-title a[href="index.php"] .icon-home,
+.header-inside .header-title .icon-home,
+.header-title [class*="icon-"],
+.header-title [class^="icon-"],
+.header-title .home-image,
+.header-title .icon-dashboard,
+.header-title .icon-home {
+  font-size: 0 !important;
+  position: relative !important;
+  display: inline-block !important;
+  width: 2rem !important;
+  height: 2rem !important;
+  vertical-align: middle !important;
+}
+
+/* Ajuster la taille du texte dans le header-title */
+.header-title .container-title,
+.header-inside .header-title .container-title,
+#header .header-inside .header-title .container-title,
+.header-title .d-flex .container-title {
+  font-size: 1.125rem !important;
+  line-height: 1.2 !important;
+  vertical-align: middle !important;
+}
+
+.header-title .container-title *,
+.header-inside .header-title .container-title *,
+#header .header-inside .header-title .container-title *,
+.header-title .d-flex .container-title * {
+  font-size: 1.125rem !important;
+  line-height: 1.2 !important;
+  vertical-align: middle !important;
+}
+
+.header-title .icon-home::before,
+.header-title a[href="index.php"] .icon-home::before,
+.header-inside .header-title .icon-home::before,
+.header-title [class*="icon-"]::before,
+.header-title [class^="icon-"]::before,
+.header-title .home-image::before,
+.header-title .icon-dashboard::before,
+.header-title .icon-home::before {
+  content: "" !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='32' viewBox='0 0 24 24' width='32' fill='%23495057'%3E%3Cpath d='M0 0h24v24H0V0z' fill='none'/%3E%3Cpath d='M12 5.69l5 4.5V18h-2v-6H9v6H7v-7.81l5-4.5M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3z'/%3E%3C/svg%3E") !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: 2rem 2rem !important;
+}
+
+/* Style pour les autres icônes home dans le menu */
+span.home-image.icon-home,
+.cpanel-modules .list-group-item span.home-image.icon-home,
+.main-nav span.home-image.icon-home {
+  font-size: 0 !important;
+  position: relative !important;
+  display: inline-block !important;
+  width: 1.125rem !important;
+  height: 1.125rem !important;
+  vertical-align: middle !important;
+}
+
+span.home-image.icon-home::before,
+.cpanel-modules .list-group-item span.home-image.icon-home::before,
+.main-nav span.home-image.icon-home::before {
+  content: "" !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='18px' viewBox='0 0 24 24' width='18px' fill='%23495057'%3E%3Cpath d='M0 0h24v24H0V0z' fill='none'/%3E%3Cpath d='M12 5.69l5 4.5V18h-2v-6H9v6H7v-7.81l5-4.5M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3z'/%3E%3C/svg%3E") !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: contain !important;
+}
+
+/* Style pour l'icône Joomla et le texte de version */
+.header-item-content.joomlaversion .icon-joomla {
+  font-size: 1.125rem !important;
+  vertical-align: middle !important;
+  margin-right: 0.25rem !important;
+}
+
+.header-item-content.joomlaversion .header-item-text span[aria-hidden="true"] {
+  font-size: 1.125rem !important;
+  vertical-align: middle !important;
+}
+
+/* Style dropdown menus */
+.header-item .dropdown-menu,
+.header-profile .dropdown-menu {
+  border: none !important;
+  border-radius: 0.5rem !important;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2) !important;
+  padding: 0.5rem 0 !important;
+  margin-top: 0.5rem !important;
+}
+
+.header-item .dropdown-header,
+.header-profile .dropdown-header {
+  background-color: rgba(0, 0, 0, 0.03) !important;
+  font-weight: 500 !important;
+  padding: 0.75rem 1rem !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05) !important;
+}
+
+.header-item .dropdown-item,
+.header-profile .dropdown-item {
+  padding: 0.5rem 1rem !important;
+  transition: background-color 0.2s !important;
+  color: var(--text-dark) !important;
+}
+
+.header-item .dropdown-item:hover,
+.header-profile .dropdown-item:hover {
+  background-color: rgba(13, 110, 253, 0.1) !important;
+}
+
+/* Ajustements pour les icônes */
+.header-item .btn i,
+.header-item button.btn i,
+.header-item a.btn i,
+.header-item button i,
+.header-item a i,
+.header-profile button i,
+.header-item-icon > * {
+  font-size: 0.875rem !important;
+  margin-right: 0.5rem !important;
+  background-color: transparent !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+/* Supprimer le fond des icônes */
+.header-item-icon > * {
+  background-color: transparent !important;
+  border-radius: 0 !important;
+  width: auto !important;
+  min-width: auto !important;
+  height: auto !important;
+  margin: 0 !important;
+}
+
+/* Ajustements pour les badges */
+.header-item .badge {
+  margin-left: 0.25rem !important;
+  margin-right: 0.25rem !important;
+  padding: 0.2rem 0.4rem !important;
+  font-size: 0.7rem !important;
+  min-width: 1rem !important;
+  height: 1rem !important;
+  line-height: 0.7 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 0.2rem !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .header-item .d-none.d-md-inline,
+  .header-profile .d-none.d-md-inline {
+    display: none !important;
+  }
+  
+  .header-item .btn,
+  .header-item button.btn,
+  .header-item a.btn,
+  .header-item button,
+  .header-item a,
+  .header-profile button {
+    padding: 0.25rem 0.5rem !important;
+    font-size: 0.75rem !important;
+  }
+  
+  .header-item .btn i,
+  .header-item button.btn i,
+  .header-item a.btn i,
+  .header-item button i,
+  .header-item a i,
+  .header-profile button i {
+    font-size: 0.75rem !important;
+    margin-right: 0.25rem !important;
+    background-color: transparent !important;
+  }
+}
+
+/* Réduction de la taille des icônes de 2rem à 1rem */
+.quick-icons .quickicon a .quickicon-icon > * {
+  font-size: 1rem !important;
+  max-height: 1rem !important;
+}
+
+/* Style pour les icônes Material Design Two Tone */
+.material-icons-two-tone {
+  font-size: 1rem !important;
+  vertical-align: middle !important;
+  margin-right: 0.25rem !important;
+}
+
+/* Style spécifique pour les quickicons */
+.quick-icons .material-icons-two-tone {
+  font-size: 1.125rem !important;
+}
+
+/* ========================================
+   STYLES NATIFS DE LA SIDEBAR ATUM
+   ======================================== */
+
+/* Styles pour la sidebar basés sur le template parent Atum */
+.sidebar-wrapper {
+  z-index: 1010;
+  background-color: #ffffff !important; /* Fond blanc */
+  min-height: calc(100vh - 66px);
+  box-shadow: var(--atum-box-shadow);
+  overflow: hidden;
+}
+
+.sidebar-wrapper .sidebar-sticky {
+  position: sticky;
+  top: 0;
+}
+
+.sidebar-wrapper .item {
+  flex-wrap: wrap;
+  list-style-type: none;
+  display: flex;
+  position: relative;
+}
+
+.sidebar-wrapper .item a, 
+.sidebar-wrapper .item .menu-dashboard, 
+.sidebar-wrapper .item .menu-quicktask {
+  color: var(--text-dark) !important; /* Utilisation de la couleur de texte foncée dynamique */
+  text-decoration: none;
+}
+
+.sidebar-wrapper .item a:hover, 
+.sidebar-wrapper .item .menu-dashboard:hover, 
+.sidebar-wrapper .item .menu-quicktask:hover {
+  color: var(--mdb-primary) !important; /* Couleur primaire MDBootstrap au survol */
+  background-color: rgba(var(--mdb-primary-rgb), 0.1) !important; /* Fond légèrement teinté */
+  text-decoration: none;
+}
+
+.sidebar-wrapper .item > a {
+  flex-grow: 1;
+  align-items: center;
+  min-height: 40px;
+  display: flex;
+  position: relative;
+}
+
+.sidebar-wrapper .item > a [class^="icon-"], 
+.sidebar-wrapper .item > a [class*=" icon-"], 
+.sidebar-wrapper .item > a [class^="fa-"], 
+.sidebar-wrapper .item > a [class*=" fa-"] {
+  margin: 0 .85rem;
+  transform: scale(1.2);
+  color: var(--text-dark) !important; /* Couleur des icônes en texte foncé */
+}
+
+.sidebar-wrapper .item-level-2 > a {
+  padding-inline-start: 3rem;
+}
+
+.sidebar-wrapper .item-level-3 > a {
+  padding-inline-start: 3.75rem;
+}
+
+@media (width >= 576px) {
+  .sidebar-wrapper {
+    flex: 1 0 18rem;
+    max-width: 18rem;
+    transition: all .3s ease-in-out;
+  }
+}
+
+@media (width <= 575.98px) {
+  .sidebar-wrapper.sidebar-menu {
+    top: auto;
+  }
+}
+
+.sidebar-wrapper .sidebar-toggle {
+  background: #ffffff !important; /* Fond blanc */
+}
+
+.sidebar-wrapper .sidebar-toggle a {
+  color: var(--text-dark) !important; /* Couleur de texte foncée dynamique */
+}
+
+.sidebar-wrapper .sidebar-toggle .sidebar-item-title {
+  white-space: nowrap;
+}
+
+.main-nav {
+  width: 18rem;
+  padding: 0;
+  font-size: .95rem;
+}
+
+@media (width <= 575.98px) {
+  .main-nav {
+    width: 100%;
+  }
+}
+
+.main-nav ul {
+  background-color: #ffffff !important; /* Fond blanc */
+  width: 100%;
+  padding: 0;
+}
+
+.main-nav .divider {
+  background-color: var(--main-nav-divider-bg);
+  height: 1px;
+  margin: 0 0 0 48px;
+  list-style: none;
+}
+
+.main-nav .menuitem-group {
+  margin-top: .65rem;
+  padding-inline-start: 3rem;
+  font-size: .75rem;
+}
+
+.main-nav .menuitem-group .sidebar-item-title {
+  color: var(--mdb-primary) !important; /* Couleur primaire pour les titres de groupe */
+  font-weight: 500;
+}
+
+.main-nav .has-arrow .sidebar-item-title {
+  margin-inline-end: auto;
+}
+
+.main-nav a.mm-active {
+  background-color: rgba(var(--mdb-primary-rgb), 0.1) !important; /* Fond légèrement teinté */
+  color: var(--mdb-primary) !important;
+}
+
+.main-nav a.mm-active + .menu-quicktask {
+  background-color: rgba(var(--mdb-primary-rgb), 0.05) !important; /* Fond légèrement teinté */
+}
+
+.main-nav .badge {
+  background-color: var(--mdb-primary) !important; /* Badge en couleur primaire */
+  align-self: center;
+  margin: 0 .3rem .25rem;
+  color: #ffffff !important;
+}
+
+/* Style pour les éléments actifs de la sidebar avec couleur MDBootstrap */
+.main-nav .item.active > a,
+.main-nav .item.active > .sidebar-item-title-wrapper {
+  background-color: var(--mdb-primary) !important;
+  color: #fff !important;
+}
+
+.main-nav .item.active > a [class^="icon-"],
+.main-nav .item.active > a [class*=" icon-"],
+.main-nav .item.active > .sidebar-item-title-wrapper [class^="icon-"],
+.main-nav .item.active > .sidebar-item-title-wrapper [class*=" icon-"] {
+  color: #fff !important;
+}
+
+/* Style pour l'icône dashboard avec Material Icons Two-Tone */
+.menu-dashboard img.atum-dashboard {
+  display: none !important;
+}
+
+/* Masquer l'icône d'origine */
+.menu-dashboard a [class^="icon-"],
+.menu-dashboard a [class*=" icon-"] {
+  display: none !important;
+}
+
+/* Appliquer la couleur de texte foncé dynamique à toute l'interface */
+html body {
+  color: var(--text-dark) !important;
+}
+
+/* Appliquer la couleur aux éléments spécifiques */
+html body h1, html body h2, html body h3, html body h4, html body h5, html body h6,
+html body p, html body span, html body div, html body td, html body th,
+html body label, html body .card-title, html body .card-header, html body .card-body,
+html body .list-group-item, html body .nav-link, html body .dropdown-item,
+html body .form-control, html body .btn:not(.btn-primary):not(.btn-secondary):not(.btn-success):not(.btn-danger):not(.btn-warning):not(.btn-info),
+html body .alert-heading, html body .breadcrumb-item {
+  color: var(--text-dark) !important;
+}
+
+/* Appliquer la couleur aux liens */
+html body a:not(.btn):not(.nav-link.active), 
+html body a:not(.btn):not(.nav-link.active) span {
+  color: var(--mdb-primary) !important;
+}
+
+/* Appliquer la couleur aux éléments de la sidebar */
+html body .wrapper .sidebar-wrapper .sidebar-nav .nav-item a,
+html body .wrapper .sidebar-wrapper .sidebar-nav .nav-item a span,
+html body .wrapper .sidebar-wrapper .sidebar-nav .nav-item .nav-link,
+html body .wrapper .sidebar-wrapper .sidebar-nav .nav-item .sidebar-item-title-wrapper,
+html body .wrapper .sidebar-wrapper .sidebar-nav .item a,
+html body .wrapper .sidebar-wrapper .sidebar-nav .item a span,
+html body .wrapper .sidebar-wrapper .sidebar-nav .item .nav-link,
+html body .wrapper .sidebar-wrapper .sidebar-nav .item .sidebar-item-title-wrapper,
+html body .wrapper .sidebar-wrapper .main-nav .nav-item a,
+html body .wrapper .sidebar-wrapper .main-nav .nav-item a span,
+html body .wrapper .sidebar-wrapper .main-nav .nav-item .nav-link,
+html body .wrapper .sidebar-wrapper .main-nav .nav-item .sidebar-item-title-wrapper,
+html body .wrapper .sidebar-wrapper .main-nav .item a,
+html body .wrapper .sidebar-wrapper .main-nav .item a span,
+html body .wrapper .sidebar-wrapper .main-nav .item .nav-link,
+html body .wrapper .sidebar-wrapper .main-nav .item .sidebar-item-title-wrapper {
+  color: var(--text-dark) !important;
+}
+
+/* Conserver la couleur blanche pour les éléments actifs avec spécificité maximale */
+html body .wrapper .sidebar-wrapper .sidebar-nav .nav-item.active a,
+html body .wrapper .sidebar-wrapper .sidebar-nav .nav-item.active a span,
+html body .wrapper .sidebar-wrapper .sidebar-nav .nav-item.active .nav-link,
+html body .wrapper .sidebar-wrapper .sidebar-nav .nav-item.active .sidebar-item-title-wrapper,
+html body .wrapper .sidebar-wrapper .sidebar-nav .item.active a,
+html body .wrapper .sidebar-wrapper .sidebar-nav .item.active a span,
+html body .wrapper .sidebar-wrapper .sidebar-nav .item.active .nav-link,
+html body .wrapper .sidebar-wrapper .sidebar-nav .item.active .sidebar-item-title-wrapper,
+html body .wrapper .sidebar-wrapper .main-nav .nav-item.active a,
+html body .wrapper .sidebar-wrapper .main-nav .nav-item.active a span,
+html body .wrapper .sidebar-wrapper .main-nav .nav-item.active .nav-link,
+html body .wrapper .sidebar-wrapper .main-nav .nav-item.active .sidebar-item-title-wrapper,
+html body .wrapper .sidebar-wrapper .main-nav .item.active a,
+html body .wrapper .sidebar-wrapper .main-nav .item.active a span,
+html body .wrapper .sidebar-wrapper .main-nav .item.active .nav-link,
+html body .wrapper .sidebar-wrapper .main-nav .item.active .sidebar-item-title-wrapper {
+  color: #fff !important;
+}
+
+/* Masquer COMPLÈTEMENT les icônes d'origine */
+.menu-dashboard img.atum-dashboard,
+.menu-dashboard a [class^="icon-"],
+.menu-dashboard a [class*=" icon-"],
+.menu-quicktask a span.icon-plus,
+.menu-quicktask a [class^="icon-"],
+.menu-quicktask a [class*=" icon-"] {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  font-size: 0 !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  position: absolute !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  margin: -1px !important;
+  padding: 0 !important;
+  border: 0 !important;
+}
+
+/* Supprimer également les éléments span à l'intérieur des liens */
+.menu-dashboard a span,
+.menu-quicktask a span {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  font-size: 0 !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  position: absolute !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+}
+
+/* Style pour les conteneurs d'icônes */
+.menu-dashboard a,
+.menu-quicktask a {
+  position: relative !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-decoration: none !important;
+  width: 40px !important;
+  height: 40px !important;
+  overflow: visible !important;
+}
+
+/* Utiliser l'approche Material Icons Two-Tone avec classe et nom d'icône */
+.menu-dashboard a::after {
+  content: "dashboard_customize" !important;
+  font-family: "Material Icons Two Tone" !important;
+  font-size: 24px !important;
+  display: inline-block !important;
+  width: 24px !important;
+  height: 24px !important;
+  line-height: 1 !important;
+  text-transform: none !important;
+  letter-spacing: normal !important;
+  word-wrap: normal !important;
+  white-space: nowrap !important;
+  direction: ltr !important;
+  -webkit-font-smoothing: antialiased !important;
+  text-rendering: optimizeLegibility !important;
+  -moz-osx-font-smoothing: grayscale !important;
+  font-feature-settings: 'liga' !important;
+  /* Appliquer la couleur primaire avec un filtre spécial pour conserver l'effet bicolore */
+  color: var(--mdb-primary) !important;
+  background: var(--mdb-primary) !important;
+  background-clip: text !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Utiliser l'approche Material Icons Two-Tone avec classe et nom d'icône */
+.menu-quicktask a::after {
+  content: "add_box" !important;
+  font-family: "Material Icons Two Tone" !important;
+  font-size: 24px !important;
+  display: inline-block !important;
+  width: 24px !important;
+  height: 24px !important;
+  line-height: 1 !important;
+  text-transform: none !important;
+  letter-spacing: normal !important;
+  word-wrap: normal !important;
+  white-space: nowrap !important;
+  direction: ltr !important;
+  -webkit-font-smoothing: antialiased !important;
+  text-rendering: optimizeLegibility !important;
+  -moz-osx-font-smoothing: grayscale !important;
+  font-feature-settings: 'liga' !important;
+  /* Appliquer la couleur primaire avec un filtre spécial pour conserver l'effet bicolore */
+  color: var(--mdb-primary) !important;
+  background: var(--mdb-primary) !important;
+  background-clip: text !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.2) !important;
+}

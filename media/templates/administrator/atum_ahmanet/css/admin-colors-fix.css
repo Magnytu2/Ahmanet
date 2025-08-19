@@ -1,0 +1,238 @@
+/**
+ * Solution robuste pour corriger les couleurs sur la page d'accueil de l'administration
+ * Ce fichier utilise des sélecteurs ultra-spécifiques avec !important pour garantir l'application des styles
+ */
+
+/* Cibler TOUTES les classes possibles pour la page d'accueil */
+html body.admin,
+html body.admin-cpanel,
+html body.site-cpanel,
+html body.com_cpanel,
+html body.view-cpanel,
+html body.task-display,
+html body.administrator,
+html body.admin-homepage {
+  /* Variables de base */
+  --dashboard-card-bg: #ffffff !important;
+  --dashboard-icon-bg: var(--mdb-primary) !important;
+  --dashboard-icon-color: #ffffff !important;
+  --dashboard-text-color: var(--text-dark) !important;
+  --dashboard-border-color: var(--mdb-primary) !important;
+}
+
+/* Styles pour les cartes du tableau de bord - sélecteurs ultra-spécifiques */
+html body.admin .cpanel-modules .card,
+html body.admin .dashboard-card,
+html body.admin .card-columns .card,
+html body.admin-cpanel .cpanel-modules .card,
+html body.admin-cpanel .dashboard-card,
+html body.admin-cpanel .card-columns .card,
+html body.site-cpanel .cpanel-modules .card,
+html body.site-cpanel .dashboard-card,
+html body.site-cpanel .card-columns .card,
+html body.com_cpanel .cpanel-modules .card,
+html body.com_cpanel .dashboard-card,
+html body.com_cpanel .card-columns .card,
+html body.view-cpanel .cpanel-modules .card,
+html body.view-cpanel .dashboard-card,
+html body.view-cpanel .card-columns .card,
+html body.task-display .cpanel-modules .card,
+html body.task-display .dashboard-card,
+html body.task-display .card-columns .card,
+html body.administrator .cpanel-modules .card,
+html body.administrator .dashboard-card,
+html body.administrator .card-columns .card,
+html body.admin-homepage .cpanel-modules .card,
+html body.admin-homepage .dashboard-card,
+html body.admin-homepage .card-columns .card {
+    border-top: 3px solid var(--mdb-primary) !important;
+    box-shadow: 0 2px 5px rgba(var(--mdb-primary-rgb), 0.2) !important;
+    transition: box-shadow 0.3s ease !important;
+    background-color: var(--dashboard-card-bg) !important;
+}
+
+/* Styles pour les titres des cartes */
+html body.admin .card-header,
+html body.admin .card-title,
+html body.admin .module-title,
+html body.admin-cpanel .card-header,
+html body.admin-cpanel .card-title,
+html body.admin-cpanel .module-title,
+html body.site-cpanel .card-header,
+html body.site-cpanel .card-title,
+html body.site-cpanel .module-title,
+html body.com_cpanel .card-header,
+html body.com_cpanel .card-title,
+html body.com_cpanel .module-title,
+html body.view-cpanel .card-header,
+html body.view-cpanel .card-title,
+html body.view-cpanel .module-title,
+html body.task-display .card-header,
+html body.task-display .card-title,
+html body.task-display .module-title,
+html body.administrator .card-header,
+html body.administrator .card-title,
+html body.administrator .module-title,
+html body.admin-homepage .card-header,
+html body.admin-homepage .card-title,
+html body.admin-homepage .module-title {
+    color: var(--mdb-primary) !important;
+    font-weight: 500 !important;
+}
+
+/* Styles pour les icônes du tableau de bord */
+html body.admin .icon-wrapper,
+html body.admin [class^="icon-"]:not(.nav-link [class^="icon-"]),
+html body.admin [class*=" icon-"]:not(.nav-link [class*=" icon-"]),
+html body.admin-cpanel .icon-wrapper,
+html body.admin-cpanel [class^="icon-"]:not(.nav-link [class^="icon-"]),
+html body.admin-cpanel [class*=" icon-"]:not(.nav-link [class*=" icon-"]),
+html body.site-cpanel .icon-wrapper,
+html body.site-cpanel [class^="icon-"]:not(.nav-link [class^="icon-"]),
+html body.site-cpanel [class*=" icon-"]:not(.nav-link [class*=" icon-"]),
+html body.com_cpanel .icon-wrapper,
+html body.com_cpanel [class^="icon-"]:not(.nav-link [class^="icon-"]),
+html body.com_cpanel [class*=" icon-"]:not(.nav-link [class*=" icon-"]),
+html body.view-cpanel .icon-wrapper,
+html body.view-cpanel [class^="icon-"]:not(.nav-link [class^="icon-"]),
+html body.view-cpanel [class*=" icon-"]:not(.nav-link [class*=" icon-"]),
+html body.task-display .icon-wrapper,
+html body.task-display [class^="icon-"]:not(.nav-link [class^="icon-"]),
+html body.task-display [class*=" icon-"]:not(.nav-link [class*=" icon-"]),
+html body.administrator .icon-wrapper,
+html body.administrator [class^="icon-"]:not(.nav-link [class^="icon-"]),
+html body.administrator [class*=" icon-"]:not(.nav-link [class*=" icon-"]),
+html body.admin-homepage .icon-wrapper,
+html body.admin-homepage [class^="icon-"]:not(.nav-link [class^="icon-"]),
+html body.admin-homepage [class*=" icon-"]:not(.nav-link [class*=" icon-"]) {
+    color: var(--mdb-primary) !important;
+}
+
+/* Styles spécifiques pour les icônes du tableau de bord */
+html body.admin .quickicon-icon,
+html body.admin-cpanel .quickicon-icon,
+html body.site-cpanel .quickicon-icon,
+html body.com_cpanel .quickicon-icon,
+html body.view-cpanel .quickicon-icon,
+html body.task-display .quickicon-icon,
+html body.administrator .quickicon-icon,
+html body.admin-homepage .quickicon-icon {
+    background-color: var(--dashboard-icon-bg) !important;
+    color: var(--dashboard-icon-color) !important;
+    border-color: var(--dashboard-icon-bg) !important;
+}
+
+/* Styles pour les badges et compteurs */
+html body.admin .badge,
+html body.admin .badge-info,
+html body.admin .badge-module,
+html body.admin .badge-number,
+html body.admin .system-counter,
+html body.admin-cpanel .badge,
+html body.admin-cpanel .badge-info,
+html body.admin-cpanel .badge-module,
+html body.admin-cpanel .badge-number,
+html body.admin-cpanel .system-counter,
+html body.site-cpanel .badge,
+html body.site-cpanel .badge-info,
+html body.site-cpanel .badge-module,
+html body.site-cpanel .badge-number,
+html body.site-cpanel .system-counter,
+html body.com_cpanel .badge,
+html body.com_cpanel .badge-info,
+html body.com_cpanel .badge-module,
+html body.com_cpanel .badge-number,
+html body.com_cpanel .system-counter,
+html body.view-cpanel .badge,
+html body.view-cpanel .badge-info,
+html body.view-cpanel .badge-module,
+html body.view-cpanel .badge-number,
+html body.view-cpanel .system-counter,
+html body.task-display .badge,
+html body.task-display .badge-info,
+html body.task-display .badge-module,
+html body.task-display .badge-number,
+html body.task-display .system-counter,
+html body.administrator .badge,
+html body.administrator .badge-info,
+html body.administrator .badge-module,
+html body.administrator .badge-number,
+html body.administrator .system-counter,
+html body.admin-homepage .badge,
+html body.admin-homepage .badge-info,
+html body.admin-homepage .badge-module,
+html body.admin-homepage .badge-number,
+html body.admin-homepage .system-counter {
+    background-color: var(--mdb-primary) !important;
+    color: #ffffff !important;
+    border: none !important;
+    font-weight: 500 !important;
+}
+
+/* Styles pour les boutons */
+html body.admin .cpanel-modules .btn-primary,
+html body.admin .cpanel-modules .btn-info,
+html body.admin .cpanel-modules .btn-action,
+html body.admin-cpanel .cpanel-modules .btn-primary,
+html body.admin-cpanel .cpanel-modules .btn-info,
+html body.admin-cpanel .cpanel-modules .btn-action,
+html body.site-cpanel .cpanel-modules .btn-primary,
+html body.site-cpanel .cpanel-modules .btn-info,
+html body.site-cpanel .cpanel-modules .btn-action,
+html body.com_cpanel .cpanel-modules .btn-primary,
+html body.com_cpanel .cpanel-modules .btn-info,
+html body.com_cpanel .cpanel-modules .btn-action,
+html body.view-cpanel .cpanel-modules .btn-primary,
+html body.view-cpanel .cpanel-modules .btn-info,
+html body.view-cpanel .cpanel-modules .btn-action,
+html body.task-display .cpanel-modules .btn-primary,
+html body.task-display .cpanel-modules .btn-info,
+html body.task-display .cpanel-modules .btn-action,
+html body.administrator .cpanel-modules .btn-primary,
+html body.administrator .cpanel-modules .btn-info,
+html body.administrator .cpanel-modules .btn-action,
+html body.admin-homepage .cpanel-modules .btn-primary,
+html body.admin-homepage .cpanel-modules .btn-info,
+html body.admin-homepage .cpanel-modules .btn-action {
+    background-color: var(--mdb-primary) !important;
+    border-color: var(--mdb-primary) !important;
+    color: #ffffff !important;
+}
+
+/* Styles pour les liens */
+html body.admin .cpanel-modules a:not(.btn):not(.nav-link):not(.dropdown-item),
+html body.admin-cpanel .cpanel-modules a:not(.btn):not(.nav-link):not(.dropdown-item),
+html body.site-cpanel .cpanel-modules a:not(.btn):not(.nav-link):not(.dropdown-item),
+html body.com_cpanel .cpanel-modules a:not(.btn):not(.nav-link):not(.dropdown-item),
+html body.view-cpanel .cpanel-modules a:not(.btn):not(.nav-link):not(.dropdown-item),
+html body.task-display .cpanel-modules a:not(.btn):not(.nav-link):not(.dropdown-item),
+html body.administrator .cpanel-modules a:not(.btn):not(.nav-link):not(.dropdown-item),
+html body.admin-homepage .cpanel-modules a:not(.btn):not(.nav-link):not(.dropdown-item) {
+    color: var(--mdb-primary) !important;
+    text-decoration: none !important;
+}
+
+/* Styles pour les quickicons */
+html body.admin .quickicon a .quickicon-icon,
+html body.admin-cpanel .quickicon a .quickicon-icon,
+html body.site-cpanel .quickicon a .quickicon-icon,
+html body.com_cpanel .quickicon a .quickicon-icon,
+html body.view-cpanel .quickicon a .quickicon-icon,
+html body.task-display .quickicon a .quickicon-icon,
+html body.administrator .quickicon a .quickicon-icon,
+html body.admin-homepage .quickicon a .quickicon-icon {
+    background-color: var(--mdb-primary) !important;
+    color: #ffffff !important;
+}
+
+/* Styles pour les textes spécifiques */
+html body.admin .text-primary,
+html body.admin-cpanel .text-primary,
+html body.site-cpanel .text-primary,
+html body.com_cpanel .text-primary,
+html body.view-cpanel .text-primary,
+html body.task-display .text-primary,
+html body.administrator .text-primary,
+html body.admin-homepage .text-primary {
+    color: var(--mdb-primary) !important;
+}

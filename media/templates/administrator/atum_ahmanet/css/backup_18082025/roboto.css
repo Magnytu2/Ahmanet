@@ -1,0 +1,7 @@
+/* Police Roboto pour MDBootstrap */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+/* Appliquer Roboto comme police par défaut */
+body {
+  font-family: 'Roboto', sans-serif;
+}

@@ -1,0 +1,194 @@
+/* 
+ * Force l'application du template Atum Ahmanet sur la page d'accueil de l'administration
+ * Cible spécifiquement le menu natif de Joomla
+ */
+
+/* Styles pour le menu natif */
+.sidebar-menu .main-nav > ul.nav.metismenu > li > a,
+.sidebar-menu .main-nav > ul.nav.metismenu > li > span,
+.sidebar-menu .main-nav > ul.nav.metismenu > li > .nav-header,
+.sidebar-menu .main-nav > ul.nav.metismenu > li > .sidebar-item-title-wrapper {
+  display: flex !important;
+  align-items: center !important;
+  padding: 0.8rem 1.5rem !important;
+  font-size: 0.9375rem !important;
+  color: #4f4f4f !important;
+  background-color: transparent !important;
+  border-radius: 0.25rem !important;
+  margin: 0.125rem 0.5rem !important;
+  transition: all 0.2s ease-in-out !important;
+}
+
+/* Styles pour les éléments actifs du menu natif */
+.sidebar-menu .main-nav > ul.nav.metismenu > li.active > a,
+.sidebar-menu .main-nav > ul.nav.metismenu > li.active > span,
+.sidebar-menu .main-nav > ul.nav.metismenu > li.active > .nav-header,
+.sidebar-menu .main-nav > ul.nav.metismenu > li.active > .sidebar-item-title-wrapper,
+.sidebar-menu .main-nav > ul.nav.metismenu > li.mm-active > a,
+.sidebar-menu .main-nav > ul.nav.metismenu > li.mm-active > span,
+.sidebar-menu .main-nav > ul.nav.metismenu > li.mm-active > .nav-header,
+.sidebar-menu .main-nav > ul.nav.metismenu > li.mm-active > .sidebar-item-title-wrapper,
+.sidebar-menu .main-nav > ul.nav.metismenu > li.current > a,
+.sidebar-menu .main-nav > ul.nav.metismenu > li.current > span,
+.sidebar-menu .main-nav > ul.nav.metismenu > li.current > .nav-header,
+.sidebar-menu .main-nav > ul.nav.metismenu > li.current > .sidebar-item-title-wrapper,
+.sidebar-menu .main-nav > ul.nav.metismenu > li.open > a,
+.sidebar-menu .main-nav > ul.nav.metismenu > li.open > span,
+.sidebar-menu .main-nav > ul.nav.metismenu > li.open > .nav-header,
+.sidebar-menu .main-nav > ul.nav.metismenu > li.open > .sidebar-item-title-wrapper {
+  background-color: var(--mdb-primary) !important;
+  color: #fff !important;
+  box-shadow: 0 2px 5px 0 rgba(var(--mdb-primary-rgb), 0.2), 0 2px 10px 0 rgba(var(--mdb-primary-rgb), 0.1) !important;
+}
+
+/* Styles pour les icônes dans les éléments actifs du menu natif */
+.sidebar-menu .main-nav > ul.nav.metismenu > li.active > a [class^="icon-"],
+.sidebar-menu .main-nav > ul.nav.metismenu > li.active > a [class*=" icon-"],
+.sidebar-menu .main-nav > ul.nav.metismenu > li.active > span [class^="icon-"],
+.sidebar-menu .main-nav > ul.nav.metismenu > li.active > span [class*=" icon-"],
+.sidebar-menu .main-nav > ul.nav.metismenu > li.active > .nav-header [class^="icon-"],
+.sidebar-menu .main-nav > ul.nav.metismenu > li.active > .nav-header [class*=" icon-"],
+.sidebar-menu .main-nav > ul.nav.metismenu > li.active > .sidebar-item-title-wrapper [class^="icon-"],
+.sidebar-menu .main-nav > ul.nav.metismenu > li.active > .sidebar-item-title-wrapper [class*=" icon-"],
+.sidebar-menu .main-nav > ul.nav.metismenu > li.mm-active > a [class^="icon-"],
+.sidebar-menu .main-nav > ul.nav.metismenu > li.mm-active > a [class*=" icon-"],
+.sidebar-menu .main-nav > ul.nav.metismenu > li.mm-active > span [class^="icon-"],
+.sidebar-menu .main-nav > ul.nav.metismenu > li.mm-active > span [class*=" icon-"],
+.sidebar-menu .main-nav > ul.nav.metismenu > li.mm-active > .nav-header [class^="icon-"],
+.sidebar-menu .main-nav > ul.nav.metismenu > li.mm-active > .nav-header [class*=" icon-"],
+.sidebar-menu .main-nav > ul.nav.metismenu > li.mm-active > .sidebar-item-title-wrapper [class^="icon-"],
+.sidebar-menu .main-nav > ul.nav.metismenu > li.mm-active > .sidebar-item-title-wrapper [class*=" icon-"],
+.sidebar-menu .main-nav > ul.nav.metismenu > li.current > a [class^="icon-"],
+.sidebar-menu .main-nav > ul.nav.metismenu > li.current > a [class*=" icon-"],
+.sidebar-menu .main-nav > ul.nav.metismenu > li.current > span [class^="icon-"],
+.sidebar-menu .main-nav > ul.nav.metismenu > li.current > span [class*=" icon-"],
+.sidebar-menu .main-nav > ul.nav.metismenu > li.current > .nav-header [class^="icon-"],
+.sidebar-menu .main-nav > ul.nav.metismenu > li.current > .nav-header [class*=" icon-"],
+.sidebar-menu .main-nav > ul.nav.metismenu > li.current > .sidebar-item-title-wrapper [class^="icon-"],
+.sidebar-menu .main-nav > ul.nav.metismenu > li.current > .sidebar-item-title-wrapper [class*=" icon-"],
+.sidebar-menu .main-nav > ul.nav.metismenu > li.open > a [class^="icon-"],
+.sidebar-menu .main-nav > ul.nav.metismenu > li.open > a [class*=" icon-"],
+.sidebar-menu .main-nav > ul.nav.metismenu > li.open > span [class^="icon-"],
+.sidebar-menu .main-nav > ul.nav.metismenu > li.open > span [class*=" icon-"],
+.sidebar-menu .main-nav > ul.nav.metismenu > li.open > .nav-header [class^="icon-"],
+.sidebar-menu .main-nav > ul.nav.metismenu > li.open > .nav-header [class*=" icon-"],
+.sidebar-menu .main-nav > ul.nav.metismenu > li.open > .sidebar-item-title-wrapper [class^="icon-"],
+.sidebar-menu .main-nav > ul.nav.metismenu > li.open > .sidebar-item-title-wrapper [class*=" icon-"] {
+  color: #fff !important;
+}
+
+/* Styles pour les sous-menus du menu natif */
+.sidebar-menu .main-nav > ul.nav.metismenu > li > ul,
+.sidebar-menu .main-nav > ul.nav.metismenu > li > .mm-collapse,
+.sidebar-menu .main-nav > ul.nav.metismenu > li > .collapse,
+.sidebar-menu .main-nav > ul.nav.metismenu > li > .collapsing,
+.sidebar-menu .main-nav > ul.nav.metismenu > li > .nav-child,
+.sidebar-menu .main-nav > ul.nav.metismenu > li > .mod-menu__sub,
+.sidebar-menu .main-nav > ul.nav.metismenu > li > .dropdown-menu {
+  background-color: rgba(0, 0, 0, 0.02) !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* Styles pour les éléments dans les sous-menus du menu natif */
+.sidebar-menu .main-nav > ul.nav.metismenu > li > ul > li > a,
+.sidebar-menu .main-nav > ul.nav.metismenu > li > .mm-collapse > li > a,
+.sidebar-menu .main-nav > ul.nav.metismenu > li > .collapse > li > a,
+.sidebar-menu .main-nav > ul.nav.metismenu > li > .collapsing > li > a,
+.sidebar-menu .main-nav > ul.nav.metismenu > li > .nav-child > li > a,
+.sidebar-menu .main-nav > ul.nav.metismenu > li > .mod-menu__sub > li > a,
+.sidebar-menu .main-nav > ul.nav.metismenu > li > .dropdown-menu > li > a,
+.sidebar-menu .main-nav > ul.nav.metismenu > li > ul > li > span,
+.sidebar-menu .main-nav > ul.nav.metismenu > li > .mm-collapse > li > span,
+.sidebar-menu .main-nav > ul.nav.metismenu > li > .collapse > li > span,
+.sidebar-menu .main-nav > ul.nav.metismenu > li > .collapsing > li > span,
+.sidebar-menu .main-nav > ul.nav.metismenu > li > .nav-child > li > span,
+.sidebar-menu .main-nav > ul.nav.metismenu > li > .mod-menu__sub > li > span,
+.sidebar-menu .main-nav > ul.nav.metismenu > li > .dropdown-menu > li > span,
+.sidebar-menu .main-nav > ul.nav.metismenu > li > ul > li > .nav-header,
+.sidebar-menu .main-nav > ul.nav.metismenu > li > .mm-collapse > li > .nav-header,
+.sidebar-menu .main-nav > ul.nav.metismenu > li > .collapse > li > .nav-header,
+.sidebar-menu .main-nav > ul.nav.metismenu > li > .collapsing > li > .nav-header,
+.sidebar-menu .main-nav > ul.nav.metismenu > li > .nav-child > li > .nav-header,
+.sidebar-menu .main-nav > ul.nav.metismenu > li > .mod-menu__sub > li > .nav-header,
+.sidebar-menu .main-nav > ul.nav.metismenu > li > .dropdown-menu > li > .nav-header,
+.sidebar-menu .main-nav > ul.nav.metismenu > li > ul > li > .sidebar-item-title-wrapper,
+.sidebar-menu .main-nav > ul.nav.metismenu > li > .mm-collapse > li > .sidebar-item-title-wrapper,
+.sidebar-menu .main-nav > ul.nav.metismenu > li > .collapse > li > .sidebar-item-title-wrapper,
+.sidebar-menu .main-nav > ul.nav.metismenu > li > .collapsing > li > .sidebar-item-title-wrapper,
+.sidebar-menu .main-nav > ul.nav.metismenu > li > .nav-child > li > .sidebar-item-title-wrapper,
+.sidebar-menu .main-nav > ul.nav.metismenu > li > .mod-menu__sub > li > .sidebar-item-title-wrapper,
+.sidebar-menu .main-nav > ul.nav.metismenu > li > .dropdown-menu > li > .sidebar-item-title-wrapper {
+  background-color: transparent !important;
+  color: #4f4f4f !important;
+}
+
+/* Styles pour les éléments actifs dans les sous-menus du menu natif */
+.sidebar-menu .main-nav > ul.nav.metismenu > li > ul > li.active > a,
+.sidebar-menu .main-nav > ul.nav.metismenu > li > .mm-collapse > li.active > a,
+.sidebar-menu .main-nav > ul.nav.metismenu > li > .collapse > li.active > a,
+.sidebar-menu .main-nav > ul.nav.metismenu > li > .collapsing > li.active > a,
+.sidebar-menu .main-nav > ul.nav.metismenu > li > .nav-child > li.active > a,
+.sidebar-menu .main-nav > ul.nav.metismenu > li > .mod-menu__sub > li.active > a,
+.sidebar-menu .main-nav > ul.nav.metismenu > li > .dropdown-menu > li.active > a,
+.sidebar-menu .main-nav > ul.nav.metismenu > li > ul > li.current > a,
+.sidebar-menu .main-nav > ul.nav.metismenu > li > .mm-collapse > li.current > a,
+.sidebar-menu .main-nav > ul.nav.metismenu > li > .collapse > li.current > a,
+.sidebar-menu .main-nav > ul.nav.metismenu > li > .collapsing > li.current > a,
+.sidebar-menu .main-nav > ul.nav.metismenu > li > .nav-child > li.current > a,
+.sidebar-menu .main-nav > ul.nav.metismenu > li > .mod-menu__sub > li.current > a,
+.sidebar-menu .main-nav > ul.nav.metismenu > li > .dropdown-menu > li.current > a {
+  background-color: var(--mdb-primary) !important;
+  color: #fff !important;
+}
+
+/* Styles pour les éléments au survol du menu natif */
+.sidebar-menu .main-nav > ul.nav.metismenu > li > a:hover,
+.sidebar-menu .main-nav > ul.nav.metismenu > li > span:hover,
+.sidebar-menu .main-nav > ul.nav.metismenu > li > .nav-header:hover,
+.sidebar-menu .main-nav > ul.nav.metismenu > li > .sidebar-item-title-wrapper:hover {
+  background-color: rgba(var(--mdb-primary-rgb), 0.1) !important;
+  color: var(--mdb-primary) !important;
+  text-decoration: none !important;
+}
+
+/* Styles pour les icônes du menu natif */
+.sidebar-menu .main-nav > ul.nav.metismenu > li > a [class^="icon-"],
+.sidebar-menu .main-nav > ul.nav.metismenu > li > a [class*=" icon-"],
+.sidebar-menu .main-nav > ul.nav.metismenu > li > span [class^="icon-"],
+.sidebar-menu .main-nav > ul.nav.metismenu > li > span [class*=" icon-"],
+.sidebar-menu .main-nav > ul.nav.metismenu > li > .nav-header [class^="icon-"],
+.sidebar-menu .main-nav > ul.nav.metismenu > li > .nav-header [class*=" icon-"],
+.sidebar-menu .main-nav > ul.nav.metismenu > li > .sidebar-item-title-wrapper [class^="icon-"],
+.sidebar-menu .main-nav > ul.nav.metismenu > li > .sidebar-item-title-wrapper [class*=" icon-"] {
+  margin-right: 0.5rem !important;
+  font-size: 1rem !important;
+  color: #4f4f4f !important;
+}
+
+/* Styles pour les badges du menu natif */
+.sidebar-menu .main-nav > ul.nav.metismenu > li > a .badge,
+.sidebar-menu .main-nav > ul.nav.metismenu > li > span .badge,
+.sidebar-menu .main-nav > ul.nav.metismenu > li > .nav-header .badge,
+.sidebar-menu .main-nav > ul.nav.metismenu > li > .sidebar-item-title-wrapper .badge {
+  margin-left: auto !important;
+  background-color: var(--mdb-primary) !important;
+  color: #fff !important;
+  font-size: 0.75rem !important;
+  padding: 0.25rem 0.5rem !important;
+  border-radius: 0.25rem !important;
+}
+
+/* Styles pour le wrapper de la sidebar */
+#sidebar-wrapper {
+  background-color: #fff !important;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.05), 0 2px 10px 0 rgba(0, 0, 0, 0.05) !important;
+}
+
+/* Styles pour les icônes du tableau de bord */
+.quickicon-icon,
+.quickicon-icon-overlay {
+  background-color: var(--mdb-primary) !important;
+  color: #fff !important;
+  border-color: var(--mdb-primary) !important;
+}

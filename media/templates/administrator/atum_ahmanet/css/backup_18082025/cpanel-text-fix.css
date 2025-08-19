@@ -1,0 +1,215 @@
+/**
+ * Correctif spécifique pour les couleurs de texte sur la page d'accueil de l'administration
+ * Ce fichier cible précisément les éléments de la page d'accueil (cpanel)
+ */
+
+/* Titre principal de la page d'accueil */
+.container-title {
+  color: var(--text-dark) !important;
+}
+
+/* Styles ultra-spécifiques pour corriger la couleur du texte sur la page d'accueil */
+
+/* Ciblage direct du titre principal */
+.container-title,
+#content .container-title,
+.page-title,
+#content .page-title,
+#content h1,
+#content h2,
+#content h3,
+#content h4,
+#content h5,
+#content h6,
+#content .h1,
+#content .h2,
+#content .h3,
+#content .h4,
+#content .h5,
+#content .h6,
+#content div[class*="title"],
+#content span[class*="title"],
+#content p,
+#content li,
+#content a:not(.btn),
+#content label,
+#content .card-header,
+#content .card-body,
+#content .card-footer,
+#content .card-title,
+#content .cpanel-modules .card-header,
+#content .cpanel-modules .card-title,
+#content .cpanel-modules .card-body,
+#content .cpanel-modules button span,
+#content .cpanel-add-module span,
+#content .quickicon-title,
+#content .quickicon-text,
+#content .quickicon-description,
+#content .quickicon-header,
+#content .quickicon-body,
+#content .quickicon-footer,
+#content .quickicon-content,
+#content .quickicon-name,
+#content .quickicon-label,
+#content .quickicon-text,
+#content .quickicon-description,
+#content .quickicon-header,
+#content .quickicon-body,
+#content .quickicon-footer,
+#content .quickicon-content,
+#content .quickicon-name,
+#content .quickicon-label,
+#content .quickicon-text,
+#content .quickicon-description,
+#content .quickicon-header,
+#content .quickicon-body,
+#content .quickicon-footer,
+#content .quickicon-content,
+#content .quickicon-name,
+#content .quickicon-label {
+    color: var(--text-dark) !important;
+}
+
+/* Forcer la couleur sur les éléments enfants */
+#content .container-title *,
+#content .page-title *,
+#content h1 *,
+#content h2 *,
+#content h3 *,
+#content h4 *,
+#content h5 *,
+#content h6 *,
+#content .card-header *,
+#content .card-body *,
+#content .card-footer *,
+#content .card-title *,
+#content .cpanel-modules .card-header *,
+#content .cpanel-modules .card-title *,
+#content .cpanel-modules .card-body *,
+#content .cpanel-modules button span *,
+#content .cpanel-add-module span *,
+#content .quickicon-title *,
+#content .quickicon-text *,
+#content .quickicon-description *,
+#content .quickicon-header *,
+#content .quickicon-body *,
+#content .quickicon-footer *,
+#content .quickicon-content *,
+#content .quickicon-name *,
+#content .quickicon-label * {
+    color: var(--text-dark) !important;
+}
+
+/* Styles spécifiques pour le module mod_title */
+.mod-title .container-title,
+.mod-title .container-title h1,
+.mod-title .container-title h2,
+.mod-title .container-title h3,
+.mod-title .container-title h4,
+.mod-title .container-title h5,
+.mod-title .container-title h6,
+.mod-title .container-title span,
+.mod-title .container-title div,
+.mod-title .container-title p {
+    color: var(--text-dark) !important;
+}
+
+/* Styles pour le bouton d'ajout de module */
+.cpanel-add-module span {
+    color: var(--text-dark) !important;
+}
+
+/* Styles pour les icônes de quicktask */
+.quickicon a,
+.quickicon a span,
+.quickicon-text,
+.quickicon-title,
+.quickicon-description,
+.quickicon-header,
+.quickicon-body,
+.quickicon-footer,
+.quickicon-content,
+.quickicon-name,
+.quickicon-label {
+    color: var(--text-dark) !important;
+}
+
+/* Titre du panneau d'administration */
+.container-title h1,
+.container-title h2,
+.container-title h3,
+.container-title h4,
+.container-title h5,
+.container-title h6 {
+  color: var(--text-dark) !important;
+}
+
+/* Ciblage spécifique du titre principal */
+body.admin h1.page-title,
+body.admin-cpanel h1.page-title,
+body.site-cpanel h1.page-title,
+body.com_cpanel h1.page-title,
+body.view-cpanel h1.page-title,
+body.task-display h1.page-title,
+body.administrator h1.page-title {
+  color: var(--text-dark) !important;
+}
+
+/* Ciblage direct du titre "Panneau d'administration" */
+#content h1,
+#content h2,
+#content .page-title,
+#content .container-title,
+#content .container-title * {
+  color: var(--text-dark) !important;
+}
+
+/* Ciblage ultra-spécifique avec !important pour forcer la couleur */
+body.admin #content .container-title,
+body.admin-cpanel #content .container-title,
+body.site-cpanel #content .container-title,
+body.com_cpanel #content .container-title,
+body.view-cpanel #content .container-title,
+body.task-display #content .container-title,
+body.administrator #content .container-title {
+  color: var(--text-dark) !important;
+}
+
+/* Ciblage des éléments de module mod_title */
+.mod-title .container-title,
+.mod-title .container-title *,
+[class*="mod-title"] .container-title,
+[class*="mod-title"] .container-title * {
+  color: var(--text-dark) !important;
+}
+
+/* Ciblage direct des éléments de titre avec attributs data */
+[data-title],
+[data-component-title],
+.jcomponent-title,
+.j-component-title {
+  color: var(--text-dark) !important;
+}
+
+/* Ciblage des éléments de titre dans la position title */
+.module-position-title *,
+[class*="position-title"] *,
+[id*="position-title"] * {
+  color: var(--text-dark) !important;
+}
+
+/* Ciblage des éléments de titre dans le header */
+header .container-title,
+header .page-title,
+.header .container-title,
+.header .page-title {
+  color: var(--text-dark) !important;
+}
+
+/* Ciblage des éléments de titre dans le contenu principal */
+main .container-title,
+main .page-title,
+#content .container-title,
+#content .page-title {
+  color: var(--text-dark) !important;
+}

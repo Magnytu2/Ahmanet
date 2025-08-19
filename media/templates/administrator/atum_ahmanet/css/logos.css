@@ -1,0 +1,95 @@
+/**
+ * @package     Joomla.Administrator
+ * @subpackage  Templates.Atum_Ahmanet
+ * @copyright   (C) 2025 POUSSIN Cyrille
+ * @license     GNU General Public License version 2 or later; see LICENSE.txt
+ */
+
+/* Logo styling for Ahmanet template */
+
+/* Login logo */
+.com_login .login-logo {
+  max-width: 200px;
+  margin: 0 auto 1.5rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.com_login .login-logo:hover {
+  filter: drop-shadow(0 0 8px rgba(var(--mdb-primary-rgb), 0.5));
+  transform: scale(1.02);
+}
+
+/* Header brand logo */
+.header-brand {
+  display: flex;
+  align-items: center;
+}
+
+.header-brand .header-brand-logo {
+  max-height: 48px;
+  width: auto;
+  transition: all 0.2s ease-in-out;
+  margin-right: 0.75rem;
+}
+
+/* Effet de survol sur le logo principal */
+.header-brand:hover .header-brand-logo {
+  filter: drop-shadow(0 0 4px rgba(var(--mdb-primary-rgb), 0.4));
+  transform: translateY(-1px);
+}
+
+/* Small brand logo */
+.header-brand .header-brand-logo-sm {
+  max-height: 36px;
+  width: auto;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Sidebar brand logo */
+.sidebar-brand .sidebar-brand-logo {
+  max-height: 40px;
+  width: auto;
+  transition: all 0.2s ease-in-out;
+}
+
+.sidebar-brand:hover .sidebar-brand-logo {
+  filter: drop-shadow(0 0 4px rgba(var(--mdb-primary-rgb), 0.3));
+  transform: translateY(-1px);
+}
+
+/* Mobile optimizations */
+@media (max-width: 767.98px) {
+  .header-brand .header-brand-logo {
+    max-height: 36px;
+  }
+
+  .sidebar-brand .sidebar-brand-logo {
+    max-height: 32px;
+  }
+  
+  .com_login .login-logo {
+    max-width: 160px;
+  }
+}
+
+/* Dark mode adjustments */
+[data-bs-theme="dark"] .header-brand .header-brand-logo,
+[data-bs-theme="dark"] .sidebar-brand .sidebar-brand-logo,
+[data-bs-theme="dark"] .com_login .login-logo {
+  filter: brightness(1.2);
+}
+
+[data-bs-theme="dark"] .header-brand:hover .header-brand-logo,
+[data-bs-theme="dark"] .sidebar-brand:hover .sidebar-brand-logo,
+[data-bs-theme="dark"] .com_login .login-logo:hover {
+  filter: brightness(1.2) drop-shadow(0 0 5px rgba(var(--mdb-primary-rgb), 0.5));
+}
+
+/* Print optimizations */
+@media print {
+  .header-brand .header-brand-logo,
+  .sidebar-brand .sidebar-brand-logo {
+    max-height: 32px;
+    print-color-adjust: exact;
+  }
+}

@@ -1,0 +1,324 @@
+/**
+ * Styles spécifiques pour forcer l'application des styles sur la page d'accueil
+ * Utilise des sélecteurs à haute spécificité pour garantir la priorité
+ * Poids CSS élevé pour surcharger tous les autres styles
+ */
+
+/* Styles pour la page d'accueil avec classe admin-homepage - sélecteurs renforcés */
+html body.admin-homepage #sidebar-wrapper .sidebar-nav .nav-item.active > a,
+html body.admin-homepage #sidebar-wrapper .sidebar-nav .nav-item.active > a:hover,
+html body.admin-homepage #sidebar-wrapper .sidebar-nav .nav-item.active > a:focus,
+html body.admin-homepage #sidebar-wrapper .sidebar-nav .nav-item.active > a span,
+html body.admin-homepage #sidebar-wrapper .main-nav .item.active > a,
+html body.admin-homepage #sidebar-wrapper .main-nav .item.active > a:hover,
+html body.admin-homepage #sidebar-wrapper .main-nav .item.active > a:focus,
+html body.admin-homepage #sidebar-wrapper .main-nav .item.active > a span,
+html body.admin-homepage #sidebar-wrapper .main-nav .item.mm-active > a,
+html body.admin-homepage #sidebar-wrapper .main-nav .item.current > a {
+    background-color: var(--mdb-primary) !important;
+    color: #ffffff !important;
+    box-shadow: 0 2px 5px 0 rgba(var(--mdb-primary-rgb), 0.2), 0 2px 10px 0 rgba(var(--mdb-primary-rgb), 0.1) !important;
+}
+
+/* Styles pour les sous-menus actifs - sélecteurs renforcés */
+html body.admin-homepage #sidebar-wrapper .sidebar-nav .nav-item.active .collapse-level-1 a,
+html body.admin-homepage #sidebar-wrapper .sidebar-nav .nav-item.active .collapse-level-1 a span,
+html body.admin-homepage #sidebar-wrapper .main-nav .item.active .collapse-level-1 a,
+html body.admin-homepage #sidebar-wrapper .main-nav .item.active .collapse-level-1 a span,
+html body.admin-homepage #sidebar-wrapper .main-nav .item.active .mm-collapse a,
+html body.admin-homepage #sidebar-wrapper .main-nav .item.active .mm-collapse a span,
+html body.admin-homepage #sidebar-wrapper .main-nav .item.mm-active .mm-collapse a:not(.active):not(.mm-active):not(.current),
+html body.admin-homepage #sidebar-wrapper .main-nav .item.current .mm-collapse a:not(.active):not(.mm-active):not(.current) {
+    background-color: transparent !important;
+    color: var(--mdb-primary) !important;
+}
+
+/* Styles pour les icônes du tableau de bord - sélecteurs renforcés */
+html body.admin-homepage .quickicon a,
+html body.admin-homepage .quickicon-group a,
+html body.admin-homepage .quickicon-linkadd a,
+html body.admin-homepage .cpanel-icon a,
+html body.admin-homepage .cpanel-icon-group a,
+html body.admin-homepage .cpanel-add-module a,
+html body.admin-homepage .cpanel-add-module span,
+html body.admin-homepage .dashboard-icon a,
+html body.admin-homepage .dashboard-button a {
+    color: var(--mdb-primary) !important;
+}
+
+/* Styles pour les badges et indicateurs - sélecteurs renforcés */
+html body.admin-homepage .quickicon .quickicon-amount,
+html body.admin-homepage .badge-module,
+html body.admin-homepage .badge-number,
+html body.admin-homepage .menu-badge,
+html body.admin-homepage .menu-badge-new,
+html body.admin-homepage .badge,
+html body.admin-homepage .badge-info,
+html body.admin-homepage .badge-primary,
+html body.admin-homepage .system-counter,
+html body.admin-homepage .menu-quicktask .icon-plus {
+    background-color: var(--mdb-primary) !important;
+    color: #ffffff !important;
+}
+
+/* Styles pour les icônes spécifiques - sélecteurs renforcés */
+html body.admin-homepage .icon-joomla,
+html body.admin-homepage .icon-dashboard,
+html body.admin-homepage .icon-home,
+html body.admin-homepage .icon-grid,
+html body.admin-homepage .icon-th,
+html body.admin-homepage .icon-th-large,
+html body.admin-homepage .sidebar-item-title-wrapper .icon-home,
+html body.admin-homepage .sidebar-item-title-wrapper .icon-dashboard,
+html body.admin-homepage .sidebar-item-title-wrapper .icon-grid,
+html body.admin-homepage .main-nav .item.active > a [class^="icon-"],
+html body.admin-homepage .main-nav .item.active > a [class*=" icon-"],
+html body.admin-homepage .main-nav .item.mm-active > a [class^="icon-"],
+html body.admin-homepage .main-nav .item.mm-active > a [class*=" icon-"],
+html body.admin-homepage .main-nav .item.current > a [class^="icon-"],
+html body.admin-homepage .main-nav .item.current > a [class*=" icon-"] {
+    color: inherit !important;
+}
+
+/* Styles pour les éléments de navigation - sélecteurs renforcés */
+html body.admin-homepage .main-nav > .nav-item.active > a,
+html body.admin-homepage .main-nav > .nav-item.active > a::before,
+html body.admin-homepage .main-nav > .item.active > a,
+html body.admin-homepage .main-nav > .item.active > a::before,
+html body.admin-homepage .main-nav > .item.mm-active > a,
+html body.admin-homepage .main-nav > .item.mm-active > a::before,
+html body.admin-homepage .main-nav > .item.current > a,
+html body.admin-homepage .main-nav > .item.current > a::before,
+html body.admin-homepage .sidebar-nav > .nav-item.active > a,
+html body.admin-homepage .sidebar-nav > .nav-item.active > a::before,
+html body.admin-homepage .sidebar-nav > .item.active > a,
+html body.admin-homepage .sidebar-nav > .item.active > a::before {
+    color: #ffffff !important;
+    background-color: var(--mdb-primary) !important;
+    box-shadow: 0 2px 5px 0 rgba(var(--mdb-primary-rgb), 0.2), 0 2px 10px 0 rgba(var(--mdb-primary-rgb), 0.1) !important;
+}
+
+/* Styles pour les liens du menu - sélecteurs renforcés et ciblage précis de la page d'accueil */
+html body.admin-homepage .sidebar-nav > .nav-item > a[href*="option=com_cpanel"],
+html body.admin-homepage .sidebar-nav > .nav-item > a[href*="option=com_admin"],
+html body.admin-homepage .main-nav > .item > a[href*="option=com_cpanel"],
+html body.admin-homepage .main-nav > .item > a[href*="option=com_admin"],
+html body.admin-homepage .sidebar-nav > .item > a[href*="option=com_cpanel"],
+html body.admin-homepage .sidebar-nav > .item > a[href*="option=com_admin"],
+html body.admin-homepage .main-nav > .item > a[href="index.php"],
+html body.admin-homepage .sidebar-nav > .item > a[href="index.php"],
+html body.admin-homepage .main-nav > .item > a[href*="view=cpanel"],
+html body.admin-homepage .sidebar-nav > .item > a[href*="view=cpanel"] {
+    background-color: var(--mdb-primary) !important;
+    color: #ffffff !important;
+    box-shadow: 0 2px 5px 0 rgba(var(--mdb-primary-rgb), 0.2), 0 2px 10px 0 rgba(var(--mdb-primary-rgb), 0.1) !important;
+}
+
+/* Styles pour les éléments de menu avec classe .mm-active - sélecteurs renforcés */
+html body.admin-homepage .sidebar-nav .mm-active > a,
+html body.admin-homepage .sidebar-nav .mm-active > a:hover,
+html body.admin-homepage .sidebar-nav .mm-active > a:focus,
+html body.admin-homepage .main-nav .mm-active > a,
+html body.admin-homepage .main-nav .mm-active > a:hover,
+html body.admin-homepage .main-nav .mm-active > a:focus {
+    background-color: var(--mdb-primary) !important;
+    color: #ffffff !important;
+    box-shadow: 0 2px 5px 0 rgba(var(--mdb-primary-rgb), 0.2), 0 2px 10px 0 rgba(var(--mdb-primary-rgb), 0.1) !important;
+}
+
+/* Styles pour les éléments de menu avec classe .active - sélecteurs renforcés */
+html body.admin-homepage .sidebar-nav .active > a,
+html body.admin-homepage .sidebar-nav .active > a:hover,
+html body.admin-homepage .sidebar-nav .active > a:focus,
+html body.admin-homepage .main-nav .active > a,
+html body.admin-homepage .main-nav .active > a:hover,
+html body.admin-homepage .main-nav .active > a:focus {
+    background-color: var(--mdb-primary) !important;
+    color: #ffffff !important;
+    box-shadow: 0 2px 5px 0 rgba(var(--mdb-primary-rgb), 0.2), 0 2px 10px 0 rgba(var(--mdb-primary-rgb), 0.1) !important;
+}
+
+/* Styles pour les éléments de menu avec attribut aria-current="page" - sélecteurs renforcés */
+html body.admin-homepage .sidebar-nav a[aria-current="page"],
+html body.admin-homepage .sidebar-nav a[aria-current="page"]:hover,
+html body.admin-homepage .sidebar-nav a[aria-current="page"]:focus,
+html body.admin-homepage .main-nav a[aria-current="page"],
+html body.admin-homepage .main-nav a[aria-current="page"]:hover,
+html body.admin-homepage .main-nav a[aria-current="page"]:focus {
+    background-color: var(--mdb-primary) !important;
+    color: #ffffff !important;
+    box-shadow: 0 2px 5px 0 rgba(var(--mdb-primary-rgb), 0.2), 0 2px 10px 0 rgba(var(--mdb-primary-rgb), 0.1) !important;
+}
+
+/* Styles pour les éléments de menu avec classe .current - sélecteurs renforcés */
+html body.admin-homepage .sidebar-nav .current > a,
+html body.admin-homepage .sidebar-nav .current > a:hover,
+html body.admin-homepage .sidebar-nav .current > a:focus,
+html body.admin-homepage .main-nav .current > a,
+html body.admin-homepage .main-nav .current > a:hover,
+html body.admin-homepage .main-nav .current > a:focus {
+    background-color: var(--mdb-primary) !important;
+    color: #ffffff !important;
+    box-shadow: 0 2px 5px 0 rgba(var(--mdb-primary-rgb), 0.2), 0 2px 10px 0 rgba(var(--mdb-primary-rgb), 0.1) !important;
+}
+
+/* Styles pour les éléments de menu avec attribut data-active="true" - sélecteurs renforcés */
+html body.admin-homepage .sidebar-nav [data-active="true"] > a,
+html body.admin-homepage .sidebar-nav [data-active="true"] > a:hover,
+html body.admin-homepage .sidebar-nav [data-active="true"] > a:focus,
+html body.admin-homepage .main-nav [data-active="true"] > a,
+html body.admin-homepage .main-nav [data-active="true"] > a:hover,
+html body.admin-homepage .main-nav [data-active="true"] > a:focus,
+html body.admin-homepage #sidebar-wrapper .sidebar-nav [data-active="true"] > a,
+html body.admin-homepage #sidebar-wrapper .main-nav [data-active="true"] > a {
+    background-color: var(--mdb-primary) !important;
+    color: #ffffff !important;
+    box-shadow: 0 2px 5px 0 rgba(var(--mdb-primary-rgb), 0.2), 0 2px 10px 0 rgba(var(--mdb-primary-rgb), 0.1) !important;
+}
+
+/* Styles pour les éléments de menu avec attributs spécifiques - sélecteurs renforcés */
+html body.admin-homepage .sidebar-nav a[data-menu-active="true"],
+html body.admin-homepage .main-nav a[data-menu-active="true"],
+html body.admin-homepage .sidebar-nav a[data-menu-selected="true"],
+html body.admin-homepage .main-nav a[data-menu-selected="true"],
+html body.admin-homepage .sidebar-nav a[data-menu-current="true"],
+html body.admin-homepage .main-nav a[data-menu-current="true"] {
+    background-color: var(--mdb-primary) !important;
+    color: #ffffff !important;
+    box-shadow: 0 2px 5px 0 rgba(var(--mdb-primary-rgb), 0.2), 0 2px 10px 0 rgba(var(--mdb-primary-rgb), 0.1) !important;
+}
+
+/* Styles pour les éléments de menu avec classe .nav-link-selected - sélecteurs renforcés */
+html body.admin-homepage .sidebar-nav .nav-link-selected,
+html body.admin-homepage .sidebar-nav .nav-link-selected:hover,
+html body.admin-homepage .sidebar-nav .nav-link-selected:focus,
+html body.admin-homepage .main-nav .nav-link-selected,
+html body.admin-homepage .main-nav .nav-link-selected:hover,
+html body.admin-homepage .main-nav .nav-link-selected:focus {
+    background-color: var(--mdb-primary) !important;
+    color: #ffffff !important;
+    box-shadow: 0 2px 5px 0 rgba(var(--mdb-primary-rgb), 0.2), 0 2px 10px 0 rgba(var(--mdb-primary-rgb), 0.1) !important;
+}
+
+/* Styles pour les éléments de menu avec attribut aria-expanded="true" - sélecteurs renforcés */
+html body.admin-homepage .sidebar-nav [aria-expanded="true"],
+html body.admin-homepage .sidebar-nav [aria-expanded="true"]:hover,
+html body.admin-homepage .sidebar-nav [aria-expanded="true"]:focus,
+html body.admin-homepage .main-nav [aria-expanded="true"],
+html body.admin-homepage .main-nav [aria-expanded="true"]:hover,
+html body.admin-homepage .main-nav [aria-expanded="true"]:focus {
+    background-color: var(--mdb-primary) !important;
+    color: #ffffff !important;
+    box-shadow: 0 2px 5px 0 rgba(var(--mdb-primary-rgb), 0.2), 0 2px 10px 0 rgba(var(--mdb-primary-rgb), 0.1) !important;
+}
+
+/* Styles pour forcer les couleurs sur les éléments spécifiques de la page d'accueil */
+html body.admin-homepage #sidebar-wrapper .main-nav > li:first-child > a,
+html body.admin-homepage #sidebar-wrapper .sidebar-nav > li:first-child > a,
+html body.admin-homepage #sidebar-wrapper .main-nav > .item:first-child > a,
+html body.admin-homepage #sidebar-wrapper .sidebar-nav > .item:first-child > a {
+    background-color: var(--mdb-primary) !important;
+    color: #ffffff !important;
+    box-shadow: 0 2px 5px 0 rgba(var(--mdb-primary-rgb), 0.2), 0 2px 10px 0 rgba(var(--mdb-primary-rgb), 0.1) !important;
+}
+
+/* Styles pour forcer les couleurs sur les éléments avec des classes spécifiques de Joomla */
+html body.admin-homepage .sidebar-nav .nav-header,
+html body.admin-homepage .main-nav .nav-header,
+html body.admin-homepage .sidebar-nav .mod-menu__header,
+html body.admin-homepage .main-nav .mod-menu__header {
+    color: var(--mdb-primary) !important;
+    font-weight: bold !important;
+}
+
+/* Styles pour les éléments de menu avec des classes spécifiques de Joomla */
+html body.admin-homepage .sidebar-nav .open > a,
+html body.admin-homepage .main-nav .open > a,
+html body.admin-homepage .sidebar-nav .parent.open > a,
+html body.admin-homepage .main-nav .parent.open > a,
+html body.admin-homepage .sidebar-nav .parent.active > a,
+html body.admin-homepage .main-nav .parent.active > a {
+    background-color: var(--mdb-primary) !important;
+    color: #ffffff !important;
+    box-shadow: 0 2px 5px 0 rgba(var(--mdb-primary-rgb), 0.2), 0 2px 10px 0 rgba(var(--mdb-primary-rgb), 0.1) !important;
+}
+
+/* Styles pour les éléments de menu avec classe .selected - sélecteurs renforcés */
+html body.admin-homepage .sidebar-nav .selected > a,
+html body.admin-homepage .sidebar-nav .selected > a:hover,
+html body.admin-homepage .sidebar-nav .selected > a:focus,
+html body.admin-homepage .main-nav .selected > a,
+html body.admin-homepage .main-nav .selected > a:hover,
+html body.admin-homepage .main-nav .selected > a:focus {
+    background-color: var(--mdb-primary) !important;
+    color: #ffffff !important;
+    box-shadow: 0 2px 5px 0 rgba(var(--mdb-primary-rgb), 0.2), 0 2px 10px 0 rgba(var(--mdb-primary-rgb), 0.1) !important;
+}
+
+/* Styles spécifiques pour la page d'accueil - ciblage direct des éléments du menu */
+html body.admin-homepage #menu-collapse-icon,
+html body.admin-homepage .sidebar-toggle a,
+html body.admin-homepage .sidebar-toggle a:hover,
+html body.admin-homepage .sidebar-toggle a:focus {
+    color: var(--mdb-primary) !important;
+}
+
+/* Styles pour les éléments de menu avec attributs data-* spécifiques à la page d'accueil */
+html body.admin-homepage .main-nav [data-item-id="1"] > a,
+html body.admin-homepage .sidebar-nav [data-item-id="1"] > a,
+html body.admin-homepage .main-nav [data-id="1"] > a,
+html body.admin-homepage .sidebar-nav [data-id="1"] > a,
+html body.admin-homepage .main-nav [data-parent-id="1"] > a,
+html body.admin-homepage .sidebar-nav [data-parent-id="1"] > a {
+    background-color: var(--mdb-primary) !important;
+    color: #ffffff !important;
+    box-shadow: 0 2px 5px 0 rgba(var(--mdb-primary-rgb), 0.2), 0 2px 10px 0 rgba(var(--mdb-primary-rgb), 0.1) !important;
+}
+
+/* Styles pour les éléments de menu avec classe spécifique à la page d'accueil */
+html body.admin-homepage .main-nav .home-menu-item > a,
+html body.admin-homepage .sidebar-nav .home-menu-item > a,
+html body.admin-homepage .main-nav .dashboard-menu-item > a,
+html body.admin-homepage .sidebar-nav .dashboard-menu-item > a {
+    background-color: var(--mdb-primary) !important;
+    color: #ffffff !important;
+    box-shadow: 0 2px 5px 0 rgba(var(--mdb-primary-rgb), 0.2), 0 2px 10px 0 rgba(var(--mdb-primary-rgb), 0.1) !important;
+}
+
+/* Styles pour les éléments de menu avec des classes spécifiques de Bootstrap 5 */
+html body.admin-homepage .sidebar-nav .nav-item.active .nav-link,
+html body.admin-homepage .main-nav .nav-item.active .nav-link,
+html body.admin-homepage .sidebar-nav .nav-item .nav-link.active,
+html body.admin-homepage .main-nav .nav-item .nav-link.active,
+html body.admin-homepage .sidebar-nav .nav-item.show .nav-link,
+html body.admin-homepage .main-nav .nav-item.show .nav-link,
+html body.admin-homepage .sidebar-nav .nav-item .nav-link.show,
+html body.admin-homepage .main-nav .nav-item .nav-link.show {
+    background-color: var(--mdb-primary) !important;
+    color: #ffffff !important;
+    box-shadow: 0 2px 5px 0 rgba(var(--mdb-primary-rgb), 0.2), 0 2px 10px 0 rgba(var(--mdb-primary-rgb), 0.1) !important;
+}
+
+/* Styles pour les éléments de menu avec des classes spécifiques de MDBootstrap */
+html body.admin-homepage .sidebar-nav .nav-item .nav-link.active-link,
+html body.admin-homepage .main-nav .nav-item .nav-link.active-link,
+html body.admin-homepage .sidebar-nav .nav-item.active-item,
+html body.admin-homepage .main-nav .nav-item.active-item,
+html body.admin-homepage .sidebar-nav .nav-item .nav-link.active-item,
+html body.admin-homepage .main-nav .nav-item .nav-link.active-item {
+    background-color: var(--mdb-primary) !important;
+    color: #ffffff !important;
+    box-shadow: 0 2px 5px 0 rgba(var(--mdb-primary-rgb), 0.2), 0 2px 10px 0 rgba(var(--mdb-primary-rgb), 0.1) !important;
+}
+
+/* Styles pour les éléments de menu avec des attributs spécifiques à ARIA 1.1+ */
+html body.admin-homepage .sidebar-nav a[aria-selected="true"],
+html body.admin-homepage .main-nav a[aria-selected="true"],
+html body.admin-homepage .sidebar-nav a[aria-pressed="true"],
+html body.admin-homepage .main-nav a[aria-pressed="true"],
+html body.admin-homepage .sidebar-nav a[aria-checked="true"],
+html body.admin-homepage .main-nav a[aria-checked="true"] {
+    background-color: var(--mdb-primary) !important;
+    color: #ffffff !important;
+    box-shadow: 0 2px 5px 0 rgba(var(--mdb-primary-rgb), 0.2), 0 2px 10px 0 rgba(var(--mdb-primary-rgb), 0.1) !important;
+}

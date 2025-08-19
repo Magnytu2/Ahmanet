@@ -1,0 +1,132 @@
+/**
+ * Styles spécifiques pour la page d'accueil de l'administration
+ * Ces styles s'appliquent uniquement lorsque la classe admin-homepage est présente
+ */
+
+/* Styles pour les cartes du tableau de bord */
+body.admin-homepage .cpanel-modules .card,
+body.admin-homepage .dashboard-card,
+body.admin-homepage .card-columns .card {
+    border-top: 3px solid var(--mdb-primary) !important;
+    box-shadow: 0 2px 5px rgba(var(--mdb-primary-rgb), 0.2) !important;
+    transition: box-shadow 0.3s ease !important;
+}
+
+body.admin-homepage .cpanel-modules .card:hover,
+body.admin-homepage .dashboard-card:hover,
+body.admin-homepage .card-columns .card:hover {
+    box-shadow: 0 4px 8px rgba(var(--mdb-primary-rgb), 0.3) !important;
+}
+
+/* Styles pour les titres des cartes */
+body.admin-homepage .card-header,
+body.admin-homepage .card-title,
+body.admin-homepage .module-title,
+body.admin-homepage h2.card-title,
+body.admin-homepage h3.card-title,
+body.admin-homepage h4.card-title {
+    color: var(--mdb-primary) !important;
+    font-weight: 500 !important;
+}
+
+/* Styles pour les icônes */
+body.admin-homepage .icon-wrapper,
+body.admin-homepage [class^="icon-"],
+body.admin-homepage [class*=" icon-"],
+body.admin-homepage .fa,
+body.admin-homepage .fas,
+body.admin-homepage .far,
+body.admin-homepage .fab {
+    color: var(--mdb-primary) !important;
+}
+
+/* Styles pour les badges et compteurs */
+body.admin-homepage .badge,
+body.admin-homepage .badge-info,
+body.admin-homepage .badge-module,
+body.admin-homepage .badge-number,
+body.admin-homepage .system-counter {
+    background-color: var(--mdb-primary) !important;
+    color: #ffffff !important;
+    border: none !important;
+    font-weight: 500 !important;
+    padding: 0.25rem 0.5rem !important;
+    border-radius: 0.25rem !important;
+}
+
+/* Styles pour les boutons */
+body.admin-homepage .btn-primary,
+body.admin-homepage .btn-info,
+body.admin-homepage .btn-action {
+    background-color: var(--mdb-primary) !important;
+    border-color: var(--mdb-primary) !important;
+    color: #ffffff !important;
+    box-shadow: 0 2px 5px rgba(var(--mdb-primary-rgb), 0.3) !important;
+}
+
+body.admin-homepage .btn-primary:hover,
+body.admin-homepage .btn-info:hover,
+body.admin-homepage .btn-action:hover {
+    background-color: var(--mdb-primary-hover, var(--mdb-primary)) !important;
+    border-color: var(--mdb-primary-hover, var(--mdb-primary)) !important;
+    box-shadow: 0 4px 8px rgba(var(--mdb-primary-rgb), 0.4) !important;
+}
+
+/* Styles pour le menu actif */
+body.admin-homepage #sidebar-wrapper .sidebar-nav .nav-item.active > a,
+body.admin-homepage #sidebar-wrapper .main-nav .item.active > a,
+body.admin-homepage #sidebar-wrapper .main-nav .item.current > a,
+body.admin-homepage #sidebar-wrapper .menu-dashboard.active > a,
+body.admin-homepage #sidebar-wrapper .menu-cpanel.active > a,
+body.admin-homepage #sidebar-wrapper .menu-home.active > a,
+body.admin-homepage #sidebar-wrapper a[href*="option=com_cpanel"].active {
+    background-color: var(--template-bg-dark-80) !important;
+    color: var(--template-text-light) !important;
+    box-shadow: none !important;
+}
+
+/* Styles pour les liens */
+body.admin-homepage a:not(.btn):not(.nav-link):not(.dropdown-item) {
+    color: var(--mdb-primary) !important;
+    text-decoration: none !important;
+}
+
+body.admin-homepage a:not(.btn):not(.nav-link):not(.dropdown-item):hover {
+    color: var(--mdb-primary-hover, var(--mdb-primary)) !important;
+    text-decoration: underline !important;
+}
+
+/* Styles pour les tableaux */
+body.admin-homepage table th {
+    background-color: rgba(var(--mdb-primary-rgb), 0.1) !important;
+    color: var(--text-dark) !important;
+}
+
+body.admin-homepage table.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(var(--mdb-primary-rgb), 0.05) !important;
+}
+
+/* Styles pour les éléments de navigation */
+body.admin-homepage .pagination .page-item.active .page-link {
+    background-color: var(--mdb-primary) !important;
+    border-color: var(--mdb-primary) !important;
+}
+
+/* Styles pour les alertes et notifications */
+body.admin-homepage .alert-info {
+    background-color: rgba(var(--mdb-primary-rgb), 0.1) !important;
+    border-color: rgba(var(--mdb-primary-rgb), 0.2) !important;
+    color: var(--text-dark) !important;
+}
+
+/* Styles pour les éléments de formulaire */
+body.admin-homepage .form-control:focus {
+    border-color: var(--mdb-primary) !important;
+    box-shadow: 0 0 0 0.2rem rgba(var(--mdb-primary-rgb), 0.25) !important;
+}
+
+/* Styles pour les onglets */
+body.admin-homepage .nav-tabs .nav-link.active {
+    color: var(--mdb-primary) !important;
+    border-color: var(--mdb-primary) !important;
+}

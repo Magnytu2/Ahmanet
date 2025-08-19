@@ -1,0 +1,84 @@
+/**
+ * Correctif pour l'affichage des couleurs de texte sur la page d'administration
+ * Ce fichier assure que le texte utilise la variable dynamique --text-dark
+ */
+
+/* Appliquer la couleur de texte dynamique à tous les éléments textuels de la page d'administration */
+body.admin,
+body.admin-cpanel,
+body.site-cpanel,
+body.com_cpanel,
+body.view-cpanel,
+body.task-display,
+body.administrator {
+  color: var(--text-dark) !important;
+}
+
+/* Cibler spécifiquement les éléments textuels de la page d'accueil */
+body.admin-cpanel .card-body,
+body.site-cpanel .card-body,
+body.com_cpanel .card-body,
+body.view-cpanel .card-body,
+body.task-display .card-body,
+body.administrator .card-body {
+  color: var(--text-dark) !important;
+}
+
+/* Cibler les paragraphes, spans et autres éléments textuels */
+body.administrator p,
+body.administrator span:not([class*="icon-"]),
+body.administrator div:not([class*="bg-"]),
+body.administrator label,
+body.administrator .card-title,
+body.administrator .card-text,
+body.administrator .list-group-item {
+  color: var(--text-dark) !important;
+}
+
+/* Cibler spécifiquement les éléments de la page d'accueil */
+body.administrator .cpanel-modules .card-header,
+body.administrator .cpanel-modules .module-title,
+body.administrator .cpanel-modules .module-content,
+body.administrator .cpanel-modules .list-group-item {
+  color: var(--text-dark) !important;
+}
+
+/* Assurer que les titres utilisent la couleur de texte dynamique */
+body.administrator h1,
+body.administrator h2,
+body.administrator h3,
+body.administrator h4,
+body.administrator h5,
+body.administrator h6 {
+  color: var(--text-dark) !important;
+}
+
+/* Cibler les éléments de tableau */
+body.administrator table,
+body.administrator th,
+body.administrator td {
+  color: var(--text-dark) !important;
+}
+
+/* Préserver les couleurs des liens et boutons */
+body.administrator a:not(.btn),
+body.administrator .nav-link {
+  color: var(--mdb-primary) !important;
+}
+
+body.administrator a:not(.btn):hover,
+body.administrator .nav-link:hover {
+  color: var(--mdb-primary-hover) !important;
+}
+
+/* Préserver les couleurs des textes spécifiques */
+.text-primary { color: var(--mdb-primary) !important; }
+.text-secondary { color: var(--mdb-secondary) !important; }
+.text-success { color: var(--mdb-success) !important; }
+.text-danger { color: var(--mdb-danger) !important; }
+.text-warning { color: var(--mdb-warning) !important; }
+.text-info { color: var(--mdb-info) !important; }
+.text-light { color: var(--mdb-light) !important; }
+.text-dark { color: var(--mdb-dark) !important; }
+.text-white { color: #fff !important; }
+.text-black { color: #000 !important; }

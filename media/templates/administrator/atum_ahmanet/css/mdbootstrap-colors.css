@@ -1,0 +1,299 @@
+/**
+ * MDBootstrap Colors for Atum Ahmanet Template
+ * This file integrates with Atum's native CSS variables system
+ * while maintaining MDBootstrap color standards
+ */
+
+:root {
+  /* MDBootstrap colors using Atum's CSS variable system */
+  --mdb-primary: #3b71ca;
+  --mdb-secondary: #9fa6b2;
+  --mdb-success: #14a44d;
+  --mdb-danger: #dc4c64;
+  --mdb-warning: #e4a11b;
+  --mdb-info: #54b4d3;
+  --mdb-light: #fbfbfb;
+  --mdb-dark: #332d2d;
+  
+  /* RGB versions for opacity support */
+  --mdb-primary-rgb: 59, 113, 202;
+  --mdb-secondary-rgb: 159, 166, 178;
+  --mdb-success-rgb: 20, 164, 77;
+  --mdb-danger-rgb: 220, 76, 100;
+  --mdb-warning-rgb: 228, 161, 27;
+  --mdb-info-rgb: 84, 180, 211;
+  --mdb-light-rgb: 251, 251, 251;
+  --mdb-dark-rgb: 51, 45, 45;
+  
+  /* Hover variants (slightly darker) */
+  --mdb-primary-hover: #386bc0;
+  --mdb-secondary-hover: #91989f;
+  --mdb-success-hover: #129647;
+  --mdb-danger-hover: #d1435a;
+  --mdb-warning-hover: #d69915;
+  --mdb-info-hover: #45b0d1;
+  --mdb-dark-hover: #292424;
+  
+  /* Box shadow colors with opacity */
+  --mdb-primary-shadow: rgba(59, 113, 202, 0.5);
+  --mdb-secondary-shadow: rgba(159, 166, 178, 0.5);
+  --mdb-success-shadow: rgba(20, 164, 77, 0.5);
+  --mdb-danger-shadow: rgba(220, 76, 100, 0.5);
+  --mdb-warning-shadow: rgba(228, 161, 27, 0.5);
+  --mdb-info-shadow: rgba(84, 180, 211, 0.5);
+}
+
+/* Primary color styles */
+.btn-primary {
+  background-color: var(--mdb-primary) !important;
+  border-color: var(--mdb-primary) !important;
+  color: #fff !important;
+  box-shadow: 0 4px 9px -4px rgba(var(--mdb-primary-rgb), 0.5) !important;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+  background-color: var(--mdb-primary-hover) !important;
+  border-color: var(--mdb-primary-hover) !important;
+  box-shadow: 0 8px 9px -4px rgba(var(--mdb-primary-rgb), 0.3), 0 4px 18px 0 rgba(var(--mdb-primary-rgb), 0.2) !important;
+}
+
+.text-primary {
+  color: rgb(var(--mdb-primary-rgb)) !important;
+}
+
+.bg-primary {
+  background-color: rgb(var(--mdb-primary-rgb)) !important;
+}
+
+/* Secondary color styles */
+.btn-secondary {
+  background-color: var(--mdb-secondary) !important;
+  border-color: var(--mdb-secondary) !important;
+  color: #fff !important;
+  box-shadow: 0 4px 9px -4px rgba(var(--mdb-secondary-rgb), 0.5) !important;
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus,
+.btn-secondary:active {
+  background-color: var(--mdb-secondary-hover) !important;
+  border-color: var(--mdb-secondary-hover) !important;
+  box-shadow: 0 8px 9px -4px rgba(var(--mdb-secondary-rgb), 0.3), 0 4px 18px 0 rgba(var(--mdb-secondary-rgb), 0.2) !important;
+}
+
+.text-secondary {
+  color: rgb(var(--mdb-secondary-rgb)) !important;
+}
+
+.bg-secondary {
+  background-color: rgb(var(--mdb-secondary-rgb)) !important;
+}
+
+/* Success color styles */
+.btn-success {
+  background-color: var(--mdb-success) !important;
+  border-color: var(--mdb-success) !important;
+  color: #fff !important;
+  box-shadow: 0 4px 9px -4px rgba(var(--mdb-success-rgb), 0.5) !important;
+}
+
+.btn-success:hover,
+.btn-success:focus,
+.btn-success:active {
+  background-color: var(--mdb-success-hover) !important;
+  border-color: var(--mdb-success-hover) !important;
+  box-shadow: 0 8px 9px -4px rgba(var(--mdb-success-rgb), 0.3), 0 4px 18px 0 rgba(var(--mdb-success-rgb), 0.2) !important;
+}
+
+.text-success {
+  color: rgb(var(--mdb-success-rgb)) !important;
+}
+
+.bg-success {
+  background-color: rgb(var(--mdb-success-rgb)) !important;
+}
+
+/* Danger color styles */
+.btn-danger {
+  background-color: var(--mdb-danger) !important;
+  border-color: var(--mdb-danger) !important;
+  color: #fff !important;
+  box-shadow: 0 4px 9px -4px rgba(var(--mdb-danger-rgb), 0.5) !important;
+}
+
+.btn-danger:hover,
+.btn-danger:focus,
+.btn-danger:active {
+  background-color: var(--mdb-danger-hover) !important;
+  border-color: var(--mdb-danger-hover) !important;
+  box-shadow: 0 8px 9px -4px rgba(var(--mdb-danger-rgb), 0.3), 0 4px 18px 0 rgba(var(--mdb-danger-rgb), 0.2) !important;
+}
+
+.text-danger {
+  color: rgb(var(--mdb-danger-rgb)) !important;
+}
+
+.bg-danger {
+  background-color: rgb(var(--mdb-danger-rgb)) !important;
+}
+
+/* Warning color styles */
+.btn-warning {
+  background-color: var(--mdb-warning) !important;
+  border-color: var(--mdb-warning) !important;
+  color: #fff !important;
+  box-shadow: 0 4px 9px -4px rgba(var(--mdb-warning-rgb), 0.5) !important;
+}
+
+.btn-warning:hover,
+.btn-warning:focus,
+.btn-warning:active {
+  background-color: var(--mdb-warning-hover) !important;
+  border-color: var(--mdb-warning-hover) !important;
+  box-shadow: 0 8px 9px -4px rgba(var(--mdb-warning-rgb), 0.3), 0 4px 18px 0 rgba(var(--mdb-warning-rgb), 0.2) !important;
+}
+
+.text-warning {
+  color: rgb(var(--mdb-warning-rgb)) !important;
+}
+
+.bg-warning {
+  background-color: rgb(var(--mdb-warning-rgb)) !important;
+}
+
+/* Info color styles */
+.btn-info {
+  background-color: var(--mdb-info) !important;
+  border-color: var(--mdb-info) !important;
+  color: #fff !important;
+  box-shadow: 0 4px 9px -4px rgba(var(--mdb-info-rgb), 0.5) !important;
+}
+
+.btn-info:hover,
+.btn-info:focus,
+.btn-info:active {
+  background-color: var(--mdb-info-hover) !important;
+  border-color: var(--mdb-info-hover) !important;
+  box-shadow: 0 8px 9px -4px rgba(var(--mdb-info-rgb), 0.3), 0 4px 18px 0 rgba(var(--mdb-info-rgb), 0.2) !important;
+}
+
+.text-info {
+  color: rgb(var(--mdb-info-rgb)) !important;
+}
+
+.bg-info {
+  background-color: rgb(var(--mdb-info-rgb)) !important;
+}
+
+/* Light color styles */
+.btn-light {
+  background-color: rgb(var(--mdb-light-rgb)) !important;
+  border-color: rgb(var(--mdb-light-rgb)) !important;
+  color: rgb(var(--mdb-dark-rgb)) !important;
+}
+
+.btn-light:hover {
+  background-color: rgba(var(--mdb-light-rgb), 0.9) !important;
+  border-color: rgba(var(--mdb-light-rgb), 0.9) !important;
+}
+
+.text-light {
+  color: rgb(var(--mdb-light-rgb)) !important;
+}
+
+.bg-light {
+  background-color: rgb(var(--mdb-light-rgb)) !important;
+}
+
+/* Dark color styles */
+.btn-dark {
+  background-color: rgb(var(--mdb-dark-rgb)) !important;
+  border-color: rgb(var(--mdb-dark-rgb)) !important;
+  color: rgb(var(--mdb-light-rgb)) !important;
+}
+
+.btn-dark:hover {
+  background-color: rgba(var(--mdb-dark-rgb), 0.9) !important;
+  border-color: rgba(var(--mdb-dark-rgb), 0.9) !important;
+}
+
+.text-dark {
+  color: rgb(var(--mdb-dark-rgb)) !important;
+}
+
+.bg-dark {
+  background-color: rgb(var(--mdb-dark-rgb)) !important;
+}
+
+/* Alert styles */
+.alert-primary {
+  background-color: rgba(var(--mdb-primary-rgb), 0.1) !important;
+  border-color: rgba(var(--mdb-primary-rgb), 0.2) !important;
+  color: rgb(var(--mdb-primary-rgb)) !important;
+}
+
+.alert-secondary {
+  background-color: rgba(var(--mdb-secondary-rgb), 0.1) !important;
+  border-color: rgba(var(--mdb-secondary-rgb), 0.2) !important;
+  color: rgb(var(--mdb-secondary-rgb)) !important;
+}
+
+.alert-success {
+  background-color: rgba(var(--mdb-success-rgb), 0.1) !important;
+  border-color: rgba(var(--mdb-success-rgb), 0.2) !important;
+  color: rgb(var(--mdb-success-rgb)) !important;
+}
+
+.alert-danger {
+  background-color: rgba(var(--mdb-danger-rgb), 0.1) !important;
+  border-color: rgba(var(--mdb-danger-rgb), 0.2) !important;
+  color: rgb(var(--mdb-danger-rgb)) !important;
+}
+
+.alert-warning {
+  background-color: rgba(var(--mdb-warning-rgb), 0.1) !important;
+  border-color: rgba(var(--mdb-warning-rgb), 0.2) !important;
+  color: rgb(var(--mdb-warning-rgb)) !important;
+}
+
+.alert-info {
+  background-color: rgba(var(--mdb-info-rgb), 0.1) !important;
+  border-color: rgba(var(--mdb-info-rgb), 0.2) !important;
+  color: rgb(var(--mdb-info-rgb)) !important;
+}
+
+/* Badge styles */
+.badge-primary {
+  background-color: rgb(var(--mdb-primary-rgb)) !important;
+}
+
+.badge-secondary {
+  background-color: rgb(var(--mdb-secondary-rgb)) !important;
+}
+
+.badge-success {
+  background-color: rgb(var(--mdb-success-rgb)) !important;
+}
+
+.badge-danger {
+  background-color: rgb(var(--mdb-danger-rgb)) !important;
+}
+
+.badge-warning {
+  background-color: rgb(var(--mdb-warning-rgb)) !important;
+}
+
+.badge-info {
+  background-color: rgb(var(--mdb-info-rgb)) !important;
+}
+
+.badge-light {
+  background-color: rgb(var(--mdb-light-rgb)) !important;
+  color: rgb(var(--mdb-dark-rgb)) !important;
+}
+
+.badge-dark {
+  background-color: rgb(var(--mdb-dark-rgb)) !important;
+}

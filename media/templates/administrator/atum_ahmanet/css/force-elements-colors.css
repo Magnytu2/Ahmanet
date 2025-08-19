@@ -1,0 +1,383 @@
+/**
+ * Force Elements Colors CSS
+ * 
+ * Ce fichier CSS force l'application des couleurs correctes sur les badges, boutons et autres éléments
+ * spécifiques pour garantir une cohérence visuelle sur toutes les pages d'administration
+ * 
+ * Utilise des sélecteurs ultra-spécifiques et !important pour surcharger tous les autres styles
+ */
+
+/* ===== BADGES ===== */
+/* Forcer les couleurs des badges standard */
+.badge,
+.badge-info,
+.badge-primary,
+.system-counter,
+.menu-badge,
+.menu-badge-new,
+.badge-module,
+.badge-number,
+body.admin-homepage .badge,
+body.admin-homepage .badge-info,
+body.admin-homepage .badge-primary,
+body.admin-homepage .system-counter,
+body.admin-homepage .menu-badge,
+body.admin-homepage .menu-badge-new,
+body.admin-homepage .badge-module,
+body.admin-homepage .badge-number,
+#sidebar-wrapper .sidebar-nav .nav-item .badge,
+#sidebar-wrapper .sidebar-nav .nav-item .badge-info,
+#sidebar-wrapper .sidebar-nav .nav-item .badge-primary,
+#sidebar-wrapper .sidebar-nav .nav-item .system-counter,
+#sidebar-wrapper .sidebar-nav .nav-item .menu-badge,
+#sidebar-wrapper .sidebar-nav .nav-item .menu-badge-new,
+#sidebar-wrapper .sidebar-nav .nav-item .badge-module,
+#sidebar-wrapper .sidebar-nav .nav-item .badge-number {
+    background-color: var(--template-bg-dark-60) !important;
+    color: var(--template-text-light) !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* Badges spécifiques par couleur */
+.badge-success,
+body.admin-homepage .badge-success,
+#sidebar-wrapper .sidebar-nav .nav-item .badge-success {
+    background-color: var(--mdb-success) !important;
+    color: var(--template-text-light) !important;
+}
+
+.badge-warning,
+body.admin-homepage .badge-warning,
+#sidebar-wrapper .sidebar-nav .nav-item .badge-warning {
+    background-color: var(--mdb-warning) !important;
+    color: var(--template-text-light) !important;
+}
+
+.badge-danger,
+body.admin-homepage .badge-danger,
+#sidebar-wrapper .sidebar-nav .nav-item .badge-danger {
+    background-color: var(--mdb-danger) !important;
+    color: var(--template-text-light) !important;
+}
+
+/* ===== BOUTONS ===== */
+/* Boutons primaires */
+.btn-primary,
+body.admin-homepage .btn-primary,
+button.btn-primary,
+body.admin-homepage button.btn-primary,
+a.btn-primary,
+body.admin-homepage a.btn-primary {
+    background-color: var(--mdb-primary) !important;
+    color: #fff !important;
+    border-color: var(--mdb-primary) !important;
+    box-shadow: 0 4px 9px -4px rgba(var(--mdb-primary-rgb), 0.3) !important;
+}
+
+.btn-primary:hover,
+body.admin-homepage .btn-primary:hover,
+button.btn-primary:hover,
+body.admin-homepage button.btn-primary:hover,
+a.btn-primary:hover,
+body.admin-homepage a.btn-primary:hover {
+    background-color: #386bc0 !important; /* 5% plus foncé que primary */
+    border-color: #386bc0 !important;
+    box-shadow: 0 8px 9px -4px rgba(var(--mdb-primary-rgb), 0.3), 0 4px 18px 0 rgba(var(--mdb-primary-rgb), 0.2) !important;
+}
+
+/* Boutons secondaires */
+.btn-secondary,
+body.admin-homepage .btn-secondary,
+button.btn-secondary,
+body.admin-homepage button.btn-secondary,
+a.btn-secondary,
+body.admin-homepage a.btn-secondary {
+    background-color: var(--mdb-secondary) !important;
+    color: #fff !important;
+    border-color: var(--mdb-secondary) !important;
+    box-shadow: 0 4px 9px -4px rgba(var(--mdb-secondary-rgb), 0.3) !important;
+}
+
+.btn-secondary:hover,
+body.admin-homepage .btn-secondary:hover,
+button.btn-secondary:hover,
+body.admin-homepage button.btn-secondary:hover,
+a.btn-secondary:hover,
+body.admin-homepage a.btn-secondary:hover {
+    background-color: #91989f !important; /* 5% plus foncé que secondary */
+    border-color: #91989f !important;
+    box-shadow: 0 8px 9px -4px rgba(var(--mdb-secondary-rgb), 0.3), 0 4px 18px 0 rgba(var(--mdb-secondary-rgb), 0.2) !important;
+}
+
+/* Boutons success */
+.btn-success,
+body.admin-homepage .btn-success,
+button.btn-success,
+body.admin-homepage button.btn-success,
+a.btn-success,
+body.admin-homepage a.btn-success {
+    background-color: var(--mdb-success) !important;
+    color: #fff !important;
+    border-color: var(--mdb-success) !important;
+    box-shadow: 0 4px 9px -4px rgba(var(--mdb-success-rgb), 0.3) !important;
+}
+
+.btn-success:hover,
+body.admin-homepage .btn-success:hover,
+button.btn-success:hover,
+body.admin-homepage button.btn-success:hover,
+a.btn-success:hover,
+body.admin-homepage a.btn-success:hover {
+    background-color: #0f9245 !important; /* 5% plus foncé que success */
+    border-color: #0f9245 !important;
+    box-shadow: 0 8px 9px -4px rgba(var(--mdb-success-rgb), 0.3), 0 4px 18px 0 rgba(var(--mdb-success-rgb), 0.2) !important;
+}
+
+/* Boutons danger */
+.btn-danger,
+body.admin-homepage .btn-danger,
+button.btn-danger,
+body.admin-homepage button.btn-danger,
+a.btn-danger,
+body.admin-homepage a.btn-danger {
+    background-color: var(--mdb-danger) !important;
+    color: #fff !important;
+    border-color: var(--mdb-danger) !important;
+    box-shadow: 0 4px 9px -4px rgba(var(--mdb-danger-rgb), 0.3) !important;
+}
+
+.btn-danger:hover,
+body.admin-homepage .btn-danger:hover,
+button.btn-danger:hover,
+body.admin-homepage button.btn-danger:hover,
+a.btn-danger:hover,
+body.admin-homepage a.btn-danger:hover {
+    background-color: #d1475e !important; /* 5% plus foncé que danger */
+    border-color: #d1475e !important;
+    box-shadow: 0 8px 9px -4px rgba(var(--mdb-danger-rgb), 0.3), 0 4px 18px 0 rgba(var(--mdb-danger-rgb), 0.2) !important;
+}
+
+/* Boutons warning */
+.btn-warning,
+body.admin-homepage .btn-warning,
+button.btn-warning,
+body.admin-homepage button.btn-warning,
+a.btn-warning,
+body.admin-homepage a.btn-warning {
+    background-color: var(--mdb-warning) !important;
+    color: #fff !important;
+    border-color: var(--mdb-warning) !important;
+    box-shadow: 0 4px 9px -4px rgba(var(--mdb-warning-rgb), 0.3) !important;
+}
+
+.btn-warning:hover,
+body.admin-homepage .btn-warning:hover,
+button.btn-warning:hover,
+body.admin-homepage button.btn-warning:hover,
+a.btn-warning:hover,
+body.admin-homepage a.btn-warning:hover {
+    background-color: #d69915 !important; /* 5% plus foncé que warning */
+    border-color: #d69915 !important;
+    box-shadow: 0 8px 9px -4px rgba(var(--mdb-warning-rgb), 0.3), 0 4px 18px 0 rgba(var(--mdb-warning-rgb), 0.2) !important;
+}
+
+/* Boutons info */
+.btn-info,
+body.admin-homepage .btn-info,
+button.btn-info,
+body.admin-homepage button.btn-info,
+a.btn-info,
+body.admin-homepage a.btn-info {
+    background-color: var(--mdb-info) !important;
+    color: #fff !important;
+    border-color: var(--mdb-info) !important;
+    box-shadow: 0 4px 9px -4px rgba(var(--mdb-info-rgb), 0.3) !important;
+}
+
+.btn-info:hover,
+body.admin-homepage .btn-info:hover,
+button.btn-info:hover,
+body.admin-homepage button.btn-info:hover,
+a.btn-info:hover,
+body.admin-homepage a.btn-info:hover {
+    background-color: #45b0d1 !important; /* 5% plus foncé que info */
+    border-color: #45b0d1 !important;
+    box-shadow: 0 8px 9px -4px rgba(var(--mdb-info-rgb), 0.3), 0 4px 18px 0 rgba(var(--mdb-info-rgb), 0.2) !important;
+}
+
+/* ===== ÉLÉMENTS DE MENU ===== */
+/* Éléments de menu actifs */
+.sidebar-nav .nav-item.active > a,
+.sidebar-nav .nav-item.active > a:hover,
+.sidebar-nav .nav-item.active > a:focus,
+.main-nav .item.active > a,
+.main-nav .item.active > a:hover,
+.main-nav .item.active > a:focus,
+.main-nav .item.mm-active > a,
+.main-nav .item.current > a,
+body.admin-homepage .sidebar-nav .nav-item.active > a,
+body.admin-homepage .sidebar-nav .nav-item.active > a:hover,
+body.admin-homepage .sidebar-nav .nav-item.active > a:focus,
+body.admin-homepage .main-nav .item.active > a,
+body.admin-homepage .main-nav .item.active > a:hover,
+body.admin-homepage .main-nav .item.active > a:focus,
+body.admin-homepage .main-nav .item.mm-active > a,
+body.admin-homepage .main-nav .item.current > a {
+    background-color: var(--template-bg-dark-80) !important;
+    color: var(--template-text-light) !important;
+    box-shadow: none !important;
+}
+
+/* ===== CARTES ET PANNEAUX ===== */
+/* En-têtes de cartes */
+.card-header,
+.card-title,
+.card-header h1,
+.card-header h2,
+.card-header h3,
+.card-header h4,
+.card-header h5,
+.card-header h6,
+body.admin-homepage .card-header,
+body.admin-homepage .card-title,
+body.admin-homepage .card-header h1,
+body.admin-homepage .card-header h2,
+body.admin-homepage .card-header h3,
+body.admin-homepage .card-header h4,
+body.admin-homepage .card-header h5,
+body.admin-homepage .card-header h6 {
+    color: var(--template-text-dark) !important;
+}
+
+/* ===== TEXTE ET LIENS ===== */
+/* Texte principal */
+.card-body,
+.card-body p,
+.card-body span,
+.card-body div,
+body.admin-homepage .card-body,
+body.admin-homepage .card-body p,
+body.admin-homepage .card-body span,
+body.admin-homepage .card-body div {
+    color: var(--template-text-dark) !important;
+}
+
+/* Liens */
+a:not(.btn):not(.nav-link):not(.dropdown-item),
+body.admin-homepage a:not(.btn):not(.nav-link):not(.dropdown-item) {
+    color: var(--template-link-color) !important;
+}
+
+a:not(.btn):not(.nav-link):not(.dropdown-item):hover,
+body.admin-homepage a:not(.btn):not(.nav-link):not(.dropdown-item):hover {
+    color: var(--template-special-color) !important;
+    text-decoration: underline !important;
+}
+
+/* ===== ICÔNES ===== */
+/* Icônes dans la sidebar */
+.sidebar-nav .nav-item a:before,
+.sidebar-nav .nav-item a::before,
+.main-nav .item a:before,
+.main-nav .item a::before,
+body.admin-homepage .sidebar-nav .nav-item a:before,
+body.admin-homepage .sidebar-nav .nav-item a::before,
+body.admin-homepage .main-nav .item a:before,
+body.admin-homepage .main-nav .item a::before {
+    color: var(--template-text-dark) !important;
+}
+
+/* Icônes dans les éléments actifs */
+.sidebar-nav .nav-item.active a:before,
+.sidebar-nav .nav-item.active a::before,
+.main-nav .item.active a:before,
+.main-nav .item.active a::before,
+.main-nav .item.mm-active a:before,
+.main-nav .item.mm-active a::before,
+.main-nav .item.current a:before,
+.main-nav .item.current a::before,
+body.admin-homepage .sidebar-nav .nav-item.active a:before,
+body.admin-homepage .sidebar-nav .nav-item.active a::before,
+body.admin-homepage .main-nav .item.active a:before,
+body.admin-homepage .main-nav .item.active a::before,
+body.admin-homepage .main-nav .item.mm-active a:before,
+body.admin-homepage .main-nav .item.mm-active a::before,
+body.admin-homepage .main-nav .item.current a:before,
+body.admin-homepage .main-nav .item.current a::before {
+    color: var(--template-text-light) !important;
+}
+
+/* ===== TABLEAUX ===== */
+/* En-têtes de tableaux */
+.table th,
+.table thead th,
+body.admin-homepage .table th,
+body.admin-homepage .table thead th {
+    background-color: var(--template-bg-dark) !important;
+    color: var(--template-text-light) !important;
+}
+
+/* Lignes de tableaux */
+.table td,
+body.admin-homepage .table td {
+    color: var(--template-text-dark) !important;
+}
+
+/* ===== FORMULAIRES ===== */
+/* Labels de formulaires */
+label,
+.form-label,
+body.admin-homepage label,
+body.admin-homepage .form-label {
+    color: var(--template-text-dark) !important;
+}
+
+/* Champs de formulaires */
+.form-control,
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea,
+select,
+body.admin-homepage .form-control,
+body.admin-homepage input[type="text"],
+body.admin-homepage input[type="email"],
+body.admin-homepage input[type="password"],
+body.admin-homepage textarea,
+body.admin-homepage select {
+    color: var(--template-text-dark) !important;
+    background-color: #fff !important;
+    border-color: #ced4da !important;
+}
+
+/* ===== HEADER ===== */
+/* Bouton utilisateur */
+.header-profile .dropdown-toggle,
+body.admin-homepage .header-profile .dropdown-toggle {
+    background-color: var(--mdb-secondary) !important;
+    color: #fff !important;
+    border-color: var(--mdb-secondary) !important;
+    box-shadow: 0 4px 9px -4px rgba(159, 166, 178, 0.3) !important;
+}
+
+.header-profile .dropdown-toggle:hover,
+body.admin-homepage .header-profile .dropdown-toggle:hover {
+    background-color: #91989f !important;
+    box-shadow: 0 8px 9px -4px rgba(159, 166, 178, 0.3), 0 4px 18px 0 rgba(159, 166, 178, 0.2) !important;
+}
+
+/* Bouton frontend */
+.header-items .header-item:last-child .dropdown-toggle,
+body.admin-homepage .header-items .header-item:last-child .dropdown-toggle {
+    background-color: var(--mdb-primary) !important;
+    color: #fff !important;
+    border-color: var(--mdb-primary) !important;
+    box-shadow: 0 4px 9px -4px rgba(59, 113, 202, 0.3) !important;
+}
+
+.header-items .header-item:last-child .dropdown-toggle:hover,
+body.admin-homepage .header-items .header-item:last-child .dropdown-toggle:hover {
+    background-color: #386bc0 !important;
+    box-shadow: 0 8px 9px -4px rgba(59, 113, 202, 0.3), 0 4px 18px 0 rgba(59, 113, 202, 0.2) !important;
+}

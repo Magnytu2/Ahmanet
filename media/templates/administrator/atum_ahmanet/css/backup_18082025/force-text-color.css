@@ -1,0 +1,92 @@
+/**
+ * Force Text Color - Solution radicale pour forcer la couleur du texte
+ * Ce fichier applique la couleur du texte avec une spécificité maximale
+ */
+
+/* Sélecteurs ultra-spécifiques pour la page d'accueil */
+body.admin.com_cpanel .container-title,
+body.admin.com_cpanel #content .container-title,
+body.admin.com_cpanel .page-title,
+body.admin.com_cpanel #content .page-title,
+body.admin.com_cpanel #content h1,
+body.admin.com_cpanel #content h2,
+body.admin.com_cpanel #content h3,
+body.admin.com_cpanel #content h4,
+body.admin.com_cpanel #content h5,
+body.admin.com_cpanel #content h6,
+body.admin.com_cpanel #content .card-header,
+body.admin.com_cpanel #content .card-title,
+body.admin.com_cpanel #content .card-body,
+body.admin.com_cpanel #content .cpanel-modules .card-header,
+body.admin.com_cpanel #content .cpanel-modules .card-title,
+body.admin.com_cpanel #content .cpanel-modules .card-body,
+body.admin.com_cpanel #content .cpanel-modules button span,
+body.admin.com_cpanel #content .cpanel-add-module span {
+    color: var(--text-dark) !important;
+}
+
+/* Forcer la couleur sur les éléments enfants */
+body.admin.com_cpanel #content .container-title *,
+body.admin.com_cpanel #content .page-title *,
+body.admin.com_cpanel #content h1 *,
+body.admin.com_cpanel #content h2 *,
+body.admin.com_cpanel #content h3 *,
+body.admin.com_cpanel #content h4 *,
+body.admin.com_cpanel #content h5 *,
+body.admin.com_cpanel #content h6 * {
+    color: var(--text-dark) !important;
+}
+
+/* Cibler spécifiquement les modules du tableau de bord */
+body.admin.com_cpanel .cpanel-modules .module-title,
+body.admin.com_cpanel .cpanel-modules .module-title *,
+body.admin.com_cpanel .cpanel-modules .card-header,
+body.admin.com_cpanel .cpanel-modules .card-header *,
+body.admin.com_cpanel .cpanel-modules .card-title,
+body.admin.com_cpanel .cpanel-modules .card-title * {
+    color: var(--text-dark) !important;
+}
+
+/* Cibler les boutons et liens avec texte */
+body.admin.com_cpanel .cpanel-modules .btn:not(.btn-primary):not(.btn-secondary):not(.btn-success):not(.btn-danger):not(.btn-warning):not(.btn-info) span,
+body.admin.com_cpanel .cpanel-modules .btn:not(.btn-primary):not(.btn-secondary):not(.btn-success):not(.btn-danger):not(.btn-warning):not(.btn-info) * {
+    color: var(--text-dark) !important;
+}
+
+/* Cibler les titres avec attribut ID */
+body.admin.com_cpanel #content [id^="title-"],
+body.admin.com_cpanel #content [id*="-title"],
+body.admin.com_cpanel #content [id^="header-"],
+body.admin.com_cpanel #content [id*="-header"] {
+    color: var(--text-dark) !important;
+}
+
+/* Cibler les éléments avec des classes spécifiques */
+body.admin.com_cpanel #content .title,
+body.admin.com_cpanel #content .header,
+body.admin.com_cpanel #content .heading,
+body.admin.com_cpanel #content [class*="title"],
+body.admin.com_cpanel #content [class*="header"],
+body.admin.com_cpanel #content [class*="heading"] {
+    color: var(--text-dark) !important;
+}
+
+/* Forcer la couleur sur les éléments de texte génériques */
+body.admin.com_cpanel #content p,
+body.admin.com_cpanel #content span,
+body.admin.com_cpanel #content div:not(.btn):not([class*="bg-"]):not([class*="badge"]),
+body.admin.com_cpanel #content label {
+    color: var(--text-dark) !important;
+}
+
+/* Forcer la couleur sur les éléments de liste */
+body.admin.com_cpanel #content ul li,
+body.admin.com_cpanel #content ol li {
+    color: var(--text-dark) !important;
+}
+
+/* Forcer la couleur sur les tableaux */
+body.admin.com_cpanel #content table th,
+body.admin.com_cpanel #content table td {
+    color: var(--text-dark) !important;
+}

@@ -1,0 +1,134 @@
+/* 
+ * Styles spécifiques pour la page d'accueil de l'administration
+ * Ces styles s'appliquent uniquement à la page d'accueil (sans option ni view)
+ */
+
+/* Styles pour le corps de la page d'accueil */
+body.admin-homepage #wrapper .sidebar-wrapper {
+  background-color: #fff !important;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.05), 0 2px 10px 0 rgba(0, 0, 0, 0.05) !important;
+}
+
+/* Styles pour les éléments de menu sur la page d'accueil */
+body.admin-homepage #wrapper .sidebar-wrapper .sidebar-menu .main-nav .nav.metismenu .item > a,
+body.admin-homepage #wrapper .sidebar-wrapper .sidebar-menu .main-nav .nav.metismenu .item > .sidebar-item-title-wrapper {
+  display: flex !important;
+  align-items: center !important;
+  padding: 0.8rem 1.5rem !important;
+  font-size: 0.9375rem !important;
+  color: #4f4f4f !important;
+  background-color: transparent !important;
+  border-radius: 0.25rem !important;
+  margin: 0.125rem 0.5rem !important;
+  transition: all 0.2s ease-in-out !important;
+}
+
+/* Styles pour les éléments de menu actifs sur la page d'accueil */
+body.admin-homepage #wrapper .sidebar-wrapper .sidebar-menu .main-nav .nav.metismenu .item.active > a,
+body.admin-homepage #wrapper .sidebar-wrapper .sidebar-menu .main-nav .nav.metismenu .item.active > .sidebar-item-title-wrapper,
+body.admin-homepage #wrapper .sidebar-wrapper .sidebar-menu .main-nav .nav.metismenu .item.mm-active > a,
+body.admin-homepage #wrapper .sidebar-wrapper .sidebar-menu .main-nav .nav.metismenu .item.mm-active > .sidebar-item-title-wrapper,
+body.admin-homepage #wrapper .sidebar-wrapper .sidebar-menu .main-nav .nav.metismenu .item.current > a,
+body.admin-homepage #wrapper .sidebar-wrapper .sidebar-menu .main-nav .nav.metismenu .item.current > .sidebar-item-title-wrapper,
+body.admin-homepage #wrapper .sidebar-wrapper .sidebar-menu .main-nav .nav.metismenu .item.open > a,
+body.admin-homepage #wrapper .sidebar-wrapper .sidebar-menu .main-nav .nav.metismenu .item.open > .sidebar-item-title-wrapper,
+body.admin-homepage #wrapper .sidebar-wrapper .sidebar-menu .main-nav .nav.metismenu .item.open.parent > .sidebar-item-title-wrapper,
+body.admin-homepage #wrapper .sidebar-wrapper .sidebar-menu .main-nav .nav.metismenu .item.open.parent > a,
+body.admin-homepage #wrapper .sidebar-wrapper .sidebar-menu .main-nav .nav.metismenu .item.open.parent > .nav-header,
+body.admin-homepage #wrapper .sidebar-wrapper .sidebar-menu .main-nav .nav.metismenu .item.open > .nav-header,
+body.admin-homepage #wrapper .sidebar-wrapper .sidebar-menu .main-nav .nav.metismenu .item.active.parent > .sidebar-item-title-wrapper,
+body.admin-homepage #wrapper .sidebar-wrapper .sidebar-menu .main-nav .nav.metismenu .item.active.parent > a,
+body.admin-homepage #wrapper .sidebar-wrapper .sidebar-menu .main-nav .nav.metismenu .item.active.parent > .nav-header,
+body.admin-homepage #wrapper .sidebar-wrapper .sidebar-menu .main-nav .nav.metismenu .item.active > .nav-header {
+  background-color: var(--mdb-primary) !important;
+  color: #fff !important;
+  box-shadow: 0 2px 5px 0 rgba(var(--mdb-primary-rgb), 0.2), 0 2px 10px 0 rgba(var(--mdb-primary-rgb), 0.1) !important;
+}
+
+/* Styles pour les icônes dans les éléments de menu actifs sur la page d'accueil */
+body.admin-homepage #wrapper .sidebar-wrapper .sidebar-menu .main-nav .nav.metismenu .item.active > a [class^="icon-"],
+body.admin-homepage #wrapper .sidebar-wrapper .sidebar-menu .main-nav .nav.metismenu .item.active > a [class*=" icon-"],
+body.admin-homepage #wrapper .sidebar-wrapper .sidebar-menu .main-nav .nav.metismenu .item.active > .sidebar-item-title-wrapper [class^="icon-"],
+body.admin-homepage #wrapper .sidebar-wrapper .sidebar-menu .main-nav .nav.metismenu .item.active > .sidebar-item-title-wrapper [class*=" icon-"],
+body.admin-homepage #wrapper .sidebar-wrapper .sidebar-menu .main-nav .nav.metismenu .item.current > a [class^="icon-"],
+body.admin-homepage #wrapper .sidebar-wrapper .sidebar-menu .main-nav .nav.metismenu .item.current > a [class*=" icon-"],
+body.admin-homepage #wrapper .sidebar-wrapper .sidebar-menu .main-nav .nav.metismenu .item.current > .sidebar-item-title-wrapper [class^="icon-"],
+body.admin-homepage #wrapper .sidebar-wrapper .sidebar-menu .main-nav .nav.metismenu .item.current > .sidebar-item-title-wrapper [class*=" icon-"],
+body.admin-homepage #wrapper .sidebar-wrapper .sidebar-menu .main-nav .nav.metismenu .item.open > a [class^="icon-"],
+body.admin-homepage #wrapper .sidebar-wrapper .sidebar-menu .main-nav .nav.metismenu .item.open > a [class*=" icon-"],
+body.admin-homepage #wrapper .sidebar-wrapper .sidebar-menu .main-nav .nav.metismenu .item.open > .sidebar-item-title-wrapper [class^="icon-"],
+body.admin-homepage #wrapper .sidebar-wrapper .sidebar-menu .main-nav .nav.metismenu .item.open > .sidebar-item-title-wrapper [class*=" icon-"] {
+  color: #fff !important;
+}
+
+/* Styles pour les sous-menus sur la page d'accueil */
+body.admin-homepage #wrapper .sidebar-wrapper .sidebar-menu .main-nav .nav.metismenu .mm-collapse,
+body.admin-homepage #wrapper .sidebar-wrapper .sidebar-menu .main-nav .nav.metismenu .collapse,
+body.admin-homepage #wrapper .sidebar-wrapper .sidebar-menu .main-nav .nav.metismenu .collapsing,
+body.admin-homepage #wrapper .sidebar-wrapper .sidebar-menu .main-nav .nav.metismenu .nav-child,
+body.admin-homepage #wrapper .sidebar-wrapper .sidebar-menu .main-nav .nav.metismenu .mod-menu__sub,
+body.admin-homepage #wrapper .sidebar-wrapper .sidebar-menu .main-nav .nav.metismenu .dropdown-menu {
+  background-color: rgba(0, 0, 0, 0.02) !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* Styles pour les éléments dans les sous-menus sur la page d'accueil */
+body.admin-homepage #wrapper .sidebar-wrapper .sidebar-menu .main-nav .nav.metismenu .mm-collapse .item a,
+body.admin-homepage #wrapper .sidebar-wrapper .sidebar-menu .main-nav .nav.metismenu .collapse .item a,
+body.admin-homepage #wrapper .sidebar-wrapper .sidebar-menu .main-nav .nav.metismenu .collapsing .item a,
+body.admin-homepage #wrapper .sidebar-wrapper .sidebar-menu .main-nav .nav.metismenu .nav-child .item a,
+body.admin-homepage #wrapper .sidebar-wrapper .sidebar-menu .main-nav .nav.metismenu .mod-menu__sub .item a,
+body.admin-homepage #wrapper .sidebar-wrapper .sidebar-menu .main-nav .nav.metismenu .dropdown-menu .item a,
+body.admin-homepage #wrapper .sidebar-wrapper .sidebar-menu .main-nav .nav.metismenu .mm-collapse .item .sidebar-item-title-wrapper,
+body.admin-homepage #wrapper .sidebar-wrapper .sidebar-menu .main-nav .nav.metismenu .collapse .item .sidebar-item-title-wrapper,
+body.admin-homepage #wrapper .sidebar-wrapper .sidebar-menu .main-nav .nav.metismenu .collapsing .item .sidebar-item-title-wrapper,
+body.admin-homepage #wrapper .sidebar-wrapper .sidebar-menu .main-nav .nav.metismenu .nav-child .item .sidebar-item-title-wrapper,
+body.admin-homepage #wrapper .sidebar-wrapper .sidebar-menu .main-nav .nav.metismenu .mod-menu__sub .item .sidebar-item-title-wrapper,
+body.admin-homepage #wrapper .sidebar-wrapper .sidebar-menu .main-nav .nav.metismenu .dropdown-menu .item .sidebar-item-title-wrapper {
+  background-color: transparent !important;
+  color: #4f4f4f !important;
+}
+
+/* Styles pour les éléments actifs dans les sous-menus sur la page d'accueil */
+body.admin-homepage #wrapper .sidebar-wrapper .sidebar-menu .main-nav .nav.metismenu .mm-collapse .item.active > a,
+body.admin-homepage #wrapper .sidebar-wrapper .sidebar-menu .main-nav .nav.metismenu .collapse .item.active > a,
+body.admin-homepage #wrapper .sidebar-wrapper .sidebar-menu .main-nav .nav.metismenu .nav-child .item.active > a,
+body.admin-homepage #wrapper .sidebar-wrapper .sidebar-menu .main-nav .nav.metismenu .mod-menu__sub .item.active > a,
+body.admin-homepage #wrapper .sidebar-wrapper .sidebar-menu .main-nav .nav.metismenu .dropdown-menu .item.active > a,
+body.admin-homepage #wrapper .sidebar-wrapper .sidebar-menu .main-nav .nav.metismenu .mm-collapse .item.current > a,
+body.admin-homepage #wrapper .sidebar-wrapper .sidebar-menu .main-nav .nav.metismenu .collapse .item.current > a,
+body.admin-homepage #wrapper .sidebar-wrapper .sidebar-menu .main-nav .nav.metismenu .nav-child .item.current > a,
+body.admin-homepage #wrapper .sidebar-wrapper .sidebar-menu .main-nav .nav.metismenu .mod-menu__sub .item.current > a,
+body.admin-homepage #wrapper .sidebar-wrapper .sidebar-menu .main-nav .nav.metismenu .dropdown-menu .item.current > a {
+  background-color: var(--mdb-primary) !important;
+  color: #fff !important;
+}
+
+/* Styles pour l'icône du tableau de bord des composants sur la page d'accueil */
+body.admin-homepage .quickicon-icon,
+body.admin-homepage .quickicon-icon-overlay,
+body.admin-homepage .quickicon a .quickicon-icon,
+body.admin-homepage .quickicon button .quickicon-icon,
+body.admin-homepage .quickicon-icon-overlay,
+body.admin-homepage .quickicon-icon-overlay-wrap,
+body.admin-homepage .quickicon-icon-overlay-wrap .quickicon-icon,
+body.admin-homepage .quickicon-icon-overlay-wrap .quickicon-icon-overlay,
+body.admin-homepage .quickicon-icon > *,
+body.admin-homepage .quickicon-icon-overlay > *,
+body.admin-homepage .quickicon-icon [class^="icon-"],
+body.admin-homepage .quickicon-icon [class*=" icon-"],
+body.admin-homepage .quickicon-icon-overlay [class^="icon-"],
+body.admin-homepage .quickicon-icon-overlay [class*=" icon-"],
+body.admin-homepage .quickicon-icon .icon-grid,
+body.admin-homepage .quickicon-icon .icon-th,
+body.admin-homepage .quickicon-icon .icon-th-large,
+body.admin-homepage .quickicon-icon .icon-dashboard,
+body.admin-homepage .quickicon-icon-overlay .icon-grid,
+body.admin-homepage .quickicon-icon-overlay .icon-th,
+body.admin-homepage .quickicon-icon-overlay .icon-th-large,
+body.admin-homepage .quickicon-icon-overlay .icon-dashboard {
+  background-color: var(--mdb-primary) !important;
+  color: #fff !important;
+  border-color: var(--mdb-primary) !important;
+}

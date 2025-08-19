@@ -1,0 +1,4 @@
+# Permettre l'exécution de PHP dans le dossier css
+<FilesMatch "\.php$">
+    SetHandler application/x-httpd-php
+</FilesMatch>

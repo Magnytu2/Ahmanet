@@ -1,0 +1,28 @@
+/* Fichier CSS généré automatiquement pour les couleurs MDBootstrap */
+/* Ce fichier sera remplacé par le script generate-colors.php */
+
+/* Primary */
+.btn-primary,
+.bg-primary,
+.header-item a[href*="option=com_messages"],
+.header-item a[href^="http"].header-item-content {
+  background-color: #3B71CA !important;
+  border-color: #3B71CA !important;
+  box-shadow: 0 4px 9px -4px #3B71CA80 !important;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.header-item a[href*="option=com_messages"]:hover,
+.header-item a[href*="option=com_messages"]:focus,
+.header-item a[href^="http"].header-item-content:hover,
+.header-item a[href^="http"].header-item-content:focus {
+  background-color: #386bc0 !important;
+  border-color: #386bc0 !important;
+  box-shadow: 0 8px 9px -4px #3B71CA4D, 0 4px 18px 0 #3B71CA33 !important;
+}
+
+.text-primary,
+.link-primary {
+  color: #3B71CA !important;
+}

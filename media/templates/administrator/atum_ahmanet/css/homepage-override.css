@@ -1,0 +1,135 @@
+/**
+ * CSS pour neutraliser les effets de homepage-force.css
+ * Ce fichier contient des sélecteurs ultra-spécifiques pour annuler les styles
+ * appliqués par homepage-force.css lorsque la classe admin-homepage est présente
+ */
+
+/* Neutraliser les styles pour les éléments actifs du menu */
+html body.admin-homepage #sidebar-wrapper .sidebar-nav .nav-item.active > a,
+html body.admin-homepage #sidebar-wrapper .sidebar-nav .nav-item.active > a:hover,
+html body.admin-homepage #sidebar-wrapper .sidebar-nav .nav-item.active > a:focus,
+html body.admin-homepage #sidebar-wrapper .sidebar-nav .nav-item.active > a span,
+html body.admin-homepage #sidebar-wrapper .main-nav .item.active > a,
+html body.admin-homepage #sidebar-wrapper .main-nav .item.active > a:hover,
+html body.admin-homepage #sidebar-wrapper .main-nav .item.active > a:focus,
+html body.admin-homepage #sidebar-wrapper .main-nav .item.active > a span,
+html body.admin-homepage #sidebar-wrapper .main-nav .item.mm-active > a,
+html body.admin-homepage #sidebar-wrapper .main-nav .item.current > a {
+    background-color: var(--template-bg-dark-80) !important;
+    color: var(--template-text-light) !important;
+    box-shadow: none !important;
+}
+
+/* Neutraliser les styles pour les sous-menus actifs */
+html body.admin-homepage #sidebar-wrapper .sidebar-nav .nav-item.active .collapse-level-1 a,
+html body.admin-homepage #sidebar-wrapper .sidebar-nav .nav-item.active .collapse-level-1 a span,
+html body.admin-homepage #sidebar-wrapper .main-nav .item.active .collapse-level-1 a,
+html body.admin-homepage #sidebar-wrapper .main-nav .item.active .collapse-level-1 a span,
+html body.admin-homepage #sidebar-wrapper .main-nav .item.active .mm-collapse a,
+html body.admin-homepage #sidebar-wrapper .main-nav .item.active .mm-collapse a span,
+html body.admin-homepage #sidebar-wrapper .main-nav .item.mm-active .mm-collapse a:not(.active):not(.mm-active):not(.current),
+html body.admin-homepage #sidebar-wrapper .main-nav .item.current .mm-collapse a:not(.active):not(.mm-active):not(.current) {
+    background-color: transparent !important;
+    color: var(--template-text-dark) !important;
+}
+
+/* Neutraliser les styles pour les icônes du tableau de bord */
+html body.admin-homepage .quickicon a,
+html body.admin-homepage .quickicon-group a,
+html body.admin-homepage .quickicon-linkadd a,
+html body.admin-homepage .cpanel-icon a,
+html body.admin-homepage .cpanel-icon-group a,
+html body.admin-homepage .cpanel-add-module a,
+html body.admin-homepage .cpanel-add-module span,
+html body.admin-homepage .dashboard-icon a,
+html body.admin-homepage .dashboard-button a {
+    color: var(--template-link-color) !important;
+}
+
+/* Neutraliser les styles pour les badges et indicateurs */
+html body.admin-homepage .quickicon .quickicon-amount,
+html body.admin-homepage .badge-module,
+html body.admin-homepage .badge-number,
+html body.admin-homepage .menu-badge,
+html body.admin-homepage .menu-badge-new,
+html body.admin-homepage .badge,
+html body.admin-homepage .badge-info,
+html body.admin-homepage .badge-primary,
+html body.admin-homepage .system-counter,
+html body.admin-homepage .menu-quicktask .icon-plus {
+    background-color: var(--template-bg-dark-60) !important;
+    color: var(--template-text-light) !important;
+}
+
+/* Neutraliser les styles pour les icônes spécifiques */
+html body.admin-homepage .icon-joomla,
+html body.admin-homepage .icon-dashboard,
+html body.admin-homepage .icon-home,
+html body.admin-homepage .icon-grid,
+html body.admin-homepage .icon-th,
+html body.admin-homepage .icon-th-large,
+html body.admin-homepage .sidebar-item-title-wrapper .icon-home,
+html body.admin-homepage .sidebar-item-title-wrapper .icon-dashboard,
+html body.admin-homepage .sidebar-item-title-wrapper .icon-grid,
+html body.admin-homepage .main-nav .item.active > a [class^="icon-"],
+html body.admin-homepage .main-nav .item.active > a [class*=" icon-"],
+html body.admin-homepage .main-nav .item.mm-active > a [class^="icon-"],
+html body.admin-homepage .main-nav .item.mm-active > a [class*=" icon-"],
+html body.admin-homepage .main-nav .item.current > a [class^="icon-"],
+html body.admin-homepage .main-nav .item.current > a [class*=" icon-"] {
+    color: inherit !important;
+}
+
+/* Neutraliser les styles pour les éléments de navigation */
+html body.admin-homepage .main-nav > .nav-item.active > a,
+html body.admin-homepage .main-nav > .nav-item.active > a::before,
+html body.admin-homepage .main-nav > .item.active > a,
+html body.admin-homepage .main-nav > .item.active > a::before,
+html body.admin-homepage .main-nav > .item.mm-active > a,
+html body.admin-homepage .main-nav > .item.mm-active > a::before,
+html body.admin-homepage .main-nav > .item.current > a,
+html body.admin-homepage .main-nav > .item.current > a::before,
+html body.admin-homepage .sidebar-nav > .nav-item.active > a,
+html body.admin-homepage .sidebar-nav > .nav-item.active > a::before,
+html body.admin-homepage .sidebar-nav > .item.active > a,
+html body.admin-homepage .sidebar-nav > .item.active > a::before {
+    color: var(--template-text-light) !important;
+    background-color: var(--template-bg-dark-80) !important;
+    box-shadow: none !important;
+}
+
+/* Neutraliser les styles pour les liens du menu */
+html body.admin-homepage .sidebar-nav > .nav-item > a[href*="option=com_cpanel"],
+html body.admin-homepage .sidebar-nav > .nav-item > a[href*="option=com_admin"],
+html body.admin-homepage .main-nav > .item > a[href*="option=com_cpanel"],
+html body.admin-homepage .main-nav > .item > a[href*="option=com_admin"],
+html body.admin-homepage .sidebar-nav > .item > a[href*="option=com_cpanel"],
+html body.admin-homepage .sidebar-nav > .item > a[href*="option=com_admin"],
+html body.admin-homepage .main-nav > .item > a[href="index.php"],
+html body.admin-homepage .sidebar-nav > .item > a[href="index.php"],
+html body.admin-homepage .main-nav > .item > a[href*="view=cpanel"],
+html body.admin-homepage .sidebar-nav > .item > a[href*="view=cpanel"] {
+    background-color: var(--template-bg-dark-80) !important;
+    color: var(--template-text-light) !important;
+    box-shadow: none !important;
+}
+
+/* Neutraliser les styles pour les éléments de menu avec classe .mm-active */
+html body.admin-homepage .sidebar-nav .mm-active > a,
+html body.admin-homepage .sidebar-nav .mm-active > a:hover,
+html body.admin-homepage .sidebar-nav .mm-active > a:focus,
+html body.admin-homepage .main-nav .mm-active > a,
+html body.admin-homepage .main-nav .mm-active > a:hover,
+html body.admin-homepage .main-nav .mm-active > a:focus {
+    background-color: var(--template-bg-dark-80) !important;
+    color: var(--template-text-light) !important;
+    box-shadow: none !important;
+}
+
+/* Neutraliser les styles pour les icônes du tableau de bord */
+html body.admin-homepage .quickicon-icon,
+html body.admin-homepage .quickicon-icon-overlay {
+    background-color: var(--template-bg-dark-60) !important;
+    color: var(--template-text-light) !important;
+    border-color: var(--template-bg-dark-60) !important;
+}

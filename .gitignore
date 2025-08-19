@@ -1,0 +1,37 @@
+# --- Ahmanet Git Ignore (Joomla) ---
+# Ignorer tout par défaut
+/*
+
+# Autoriser ces fichiers à la racine
+!.gitignore
+!ahmanet-snapshot.ps1
+!ahmanet-backup.ps1
+
+# Autoriser les dossiers nécessaires à Ahmanet
+!administrator/
+administrator/*
+!administrator/templates/
+administrator/templates/*
+!administrator/templates/atum_ahmanet/
+
+!media/
+media/*
+!media/templates/
+media/templates/*
+!media/templates/administrator/
+media/templates/administrator/*
+!media/templates/administrator/atum_ahmanet/
+
+# Exclure explicitement les dossiers Joomla bruyants (au cas où whitelisting serait élargi plus tard)
+/cache/
+/tmp/
+/logs/
+
+# Fichiers sensibles
+/configuration.php
+
+# Environnements/OS
+.DS_Store
+Thumbs.db
+*.log
+node_modules/
